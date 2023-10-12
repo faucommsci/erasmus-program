@@ -1,0 +1,18 @@
+---
+title: "Kontaktperson"
+subtitle: "Christoph Adrian"
+image: https://www.kowi.rw.fau.de/files/2016/08/chris_profile_square_2-e1637099789697-240x320.png
+about:
+  template: jolla
+  links:
+    - icon: house
+      text: Homepage
+      href: https://www.kowi.rw.fau.de/team/christoph-adrian/
+    - icon: envelope
+      text: Mail
+      href: mailto:christoph.adrian@fau.de?subject=ERASMUS
+    - icon: phone
+      text: 0911-530295618  
+---
+
+Ansprechpartner bei organisatorische und inhaltliche Angelegenheiten & Learning Agreements

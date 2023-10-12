@@ -1,0 +1,44 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "ERASMUS-Programm der Kommunikationswissenschaft"
+  description: "Information about the ERASMUS partner universities of the chair for communication science at FAU."
+  search: false
+
+  favicon: img/logo_fau_red.svg
+  repo-url: https://github.com/faucommsci/erasmus-program
+  repo-actions: [issue]
+  page-navigation: true
+
+  navbar:
+    logo: img/fau_wiso_white.svg
+    border: true
+
+    right:
+      - href: index.qmd
+        text: Home
+      - href: about.qmd
+        text: Kontakt
+      - icon: house
+        href: https://www.kowi.rw.fau.de/
+        aria-label: Homepage Lehrstuhl
+      - icon: house-fill
+        href: https://www.kommunikationswissenschaft.rw.fau.de/
+        aria-label: Homepage Juniorprofessur
+
+  page-footer: 
+    left: Lehrstuhl & Juniorprofessur für Kommunikationswissenschaft
+    right: "This page is built with ☕ & [Quarto](https://quarto.org/)."
+
+format:
+  html:
+    theme: 
+      light: [cosmo, theme.scss]
+      dark: [cosmo, theme-dark.scss]
+    # title-block-banner: true
+    css: styles.css
+    toc: true
+
+

@@ -1,0 +1,136 @@
+---
+title: ERASMUS-Programm
+---
+
+Für das akademische Jahr 2023/2024 besteht für Studierende der Kommunikationswissenschaft die Möglichkeit, im Rahmen des ERASMUS-Programms an verschiedenen Partneruniversitäten im europäischen Ausland zu studieren.
+
+::: callout-note
+## Allgemeine Informationen
+
+-   Für das Bewerbungsverfahren um einen Platz an einer unserer Partneruniversitäten ist das [Büro für Internationale Beziehungen](https://ib.wiso.fau.de/) zuständig. Ausführliche Informationen zum Bewerbungsprozess finden Sie [hier](https://ib.wiso.fau.de/outgo/bewerbung/).
+
+-   Allgemeine Informationen zum Auslandsstudium finden Sie [hier](https://ib.wiso.fau.de/outgo/).
+
+-   Allgemeine Informationen zum ERASMUS-Programm finden Sie [hier](https://www.fau.de/international/internationalisierung/erasmus/).
+:::
+
+## Kooperierende Universitäten
+
+```{r session-setup}
+#| echo: false
+#| message: false
+
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load(
+    readr,
+    here, tidyverse, 
+    leaflet, raster, 
+    osmdata, osmextract,
+    glue,
+    gt
+)
+```
+
+```{r import-db}
+#| echo: false
+#| message: false
+
+df <- read_delim(
+    here("data/universities-geo_locations.csv"), 
+    delim = ";",
+    escape_double = FALSE,
+    trim_ws = TRUE
+    ) %>%
+    rownames_to_column(var = "id") %>% 
+    mutate(
+        lat = str_split(lat_long, ",", simplify = TRUE)[,1], 
+        long = str_split(lat_long, ",", simplify = TRUE)[,2],
+        across(long, trimws), 
+        across(lat:long, as.numeric)
+    ) %>% 
+    mutate(
+        info = glue(
+            "<b><a href='{link}'>{uni}</a></b> <br>
+            {places} places each {duration} month <br> Courses in: {languages} <br>"
+        )
+    )
+```
+
+```{r create-icons}
+#| echo: false
+#| column: page
+icons <- awesomeIcons(
+    markerColor = "darkblue"
+)
+
+leaflet(df) %>%
+    addTiles() %>% 
+    addAwesomeMarkers(~long, ~lat, popup = ~info, icon = icons) 
+```
+
+```{r create-table}
+#| echo: false
+#| column: page
+#
+
+df %>%
+    mutate(
+        duration = paste(duration, "months", sep = " "),
+        uni_link = glue("[{uni}]({link})"),
+        uni_link = map(uni_link, gt::md)
+    ) %>% 
+    dplyr::select(country, uni_link, places:languages) %>% 
+    gt::gt() %>% 
+    cols_label(
+        country = "Counry",
+        uni_link = "University", 
+        places = "Available places",
+        duration = "Duration of stay",
+        languages = "Courses teached in"
+    ) %>% 
+    gtExtras::gt_theme_nytimes()
+```
+
+## Teilnahmevoraussetzungen
+
+::: callout-important
+## Bitte beachten
+
+Die Programme des Lehrstuhls für Kommunikationswissenschaft sind **ausschließlich sozialwissenschaftliche Austauschprogramme!**
+:::
+
+### Vor dem Auslandsaufenthalt:
+
+-   Erfolgreicher Abschluss **mindestens eines Moduls in Kommunikationswissenschaft** ([Lehrstuhl](https://www.kowi.rw.fau.de/studium/lehrangebot/) oder [Juniorprofessur](https://www.kommunikationswissenschaft.rw.fau.de/lehre/))
+-   Zudem sollten die Bewerber:innen **ausreichende Kenntnisse der jeweiligen Landessprache bzw. gute Englischkenntnisse** mitbringen.
+
+### Während des Auslandsaufenthalts:
+
+-   Erfolgreicher Abschluss mindestens einer kommunikationswissenschaftlichen Lehrveranstaltung an der speziellen Institution (Fakultät, Department, o.ä.) der jeweiligen Partneruniversität, mit der der Kooperationsvertrag besteht (siehe Liste der kooperierenden Universitäten).
+-   Darüber hinaus sollte der Schwerpunkt der belegten Lehrveranstaltungen insgesamt auf kommunikationswissenschaftlichen bzw. sozialwissenschaftlichen Kursen aus dem Angebot der der speziellen Partnerinstitution liegen. Eine Belegung von Lehrveranstaltungen an anderen Fakultäten / Institutionen / Departments der Partneruniversität nur vereinzelt oder in einigen Fällen gar nicht möglich!
+
+## Bewerbung
+
+Alle Bewerber reichen ihre Unterlagen beim [Büro für Internationale Beziehungen](https://ib.wiso.fau.de/) ein. Dort finden Sie auch alle Informationen zu den [notwendigen Bewerbungsunterlagen](https://ib.wiso.fau.de/outgo/bewerbung/).
+
+## Anrechnung der Studienleistungen
+
+Für die Anerkennung von im Ausland erbrachten Studienleistungen gilt, dass diese sowohl inhaltlich als auch hinsichtlich des Arbeitsaufwands den Anforderungen des Lehrstuhls entsprechen müssen. Als Orientierung können die allgemeinen Informationen zu den Inhalten der kommunikationswissenschaftlichen Lehrveranstaltungen aus den [Modulhandbüchern](https://www.wiso.rw.fau.de/studium/im-studium/modulhandbuecher/) dienen.
+
+### Learning Agreements
+
+Grundsätzlich gilt, dass die/der Studierende möglichst vor Antritt bzw. spätestens zu Beginn ihres/seines Auslandsaufenthaltes mit dem fachbetreuenden Lehrstuhl das für eine Anerkennung nötige Vorlesungsprogramm abzustimmen hat, soweit dies aufgrund der zur Verfügung stehenden Informationen der Gastuniversität möglich ist.
+
+Es empfiehlt sich daher, sich schon in der Bewerbungsphase Gedanken darüber zu machen, was an der Partnerhochschule studiert werden soll. Zur Absicherund der Vereinbarung dient das [Learning Agreement](https://ib.wiso.fau.de/outgo/vorbereitung/learning-agreements/).
+
+Anfragen für Learning Agreements reichen Sie bitte unter vollständiger Angabe folgender Informationen per [E-Mail](mailto:christoph.adrian@fau.de?subject=Learning%20Agreement) ein:
+
+-   ausgefülltes Learning Agreement (Bitte nutzten Sie das [aktuelle Formular](https://ib.wiso.fau.de/outgo/vorbereitung/learning-agreements/) des Büros für internationale Beziehungen)
+
+-   Ihre bereits belegte kommunikationswissenschaftliche Lehrveranstaltungen
+
+-   Weblink zu der Kursbeschreibung des zur Anrechnung vorgeschlagenen Kurses der Zieluniversität (diese sollte beinhalten: Kurstitel, -inhalt und -umfang, Assessment, ECTS-Anzahl)
+
+### Hinweise für BA-Studierende
+
+Ein Auslandsstudium empfiehlt sich insbesondere für Studierende, die Kommunikationswissenschaft im Vertiefungsbereich wählen. Zwar lassen sich prinzipiell auch die Grundkurse im Ausland ablegen, diese müssen jedoch den vom Lehrstuhl angebotenen Lehrveranstaltungen entsprechen und Einführungscharakter haben. Da das Kursangebot im Ausland oftmals eingeschränkt ist, kann eine Anrechnung der Grundkurse nicht gewährleistet werden.

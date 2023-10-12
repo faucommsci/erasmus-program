@@ -1,0 +1,29 @@
+/* css styles */
+.navbar {
+    background-image: url("img/louis-magnotti-yvcg5x3pwzc-unsplash_edit_2.png")!important;
+    background-size: cover !important;
+  }
+
+  .navbar-brand {
+    filter: drop-shadow(1px 1px 5px rgb(0 0 0 / 1));
+    color: white !important;
+  }
+  
+  .navbar-title {
+    filter: drop-shadow(1px 1px 5px rgb(0 0 0 / .5));
+    font-size: larger;
+    font-weight: bold;
+    color: white !important;
+  }
+
+  .bi{
+    filter: invert(65%) sepia(100%) saturate(150%) hue-rotate(170deg) !important;
+  }
+
+  .menu-text{
+    filter: invert(65%) sepia(100%) saturate(150%) hue-rotate(170deg) !important;
+  }
+
+ /* .quarto-navbar-tools {
+    filter: invert(65%) sepia(100%) saturate(150%) hue-rotate(170deg) !important;
+  }  */
