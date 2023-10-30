@@ -1,0 +1,36 @@
+---
+title: Incoming
+---
+
+## Where to start
+
+On the page of the [International Relations Office](https://ib.wiso.fau.de/income/) you will find a lot of useful information:
+
+-   [FAQ](https://ib.wiso.fau.de/income/faq/) for foreign Students
+
+-   [Planning](https://ib.wiso.fau.de/income/planning/) your stay and [first steps](https://ib.wiso.fau.de/income/to-do-first/)
+
+-   Special events/programmes for orientation at FAU, like the [central welcome weeks](https://www.fau.eu/education/international/from-abroad/welcome-programme-for-international-students/orientation-courses-for-international-students/) or the [Buddy programme](https://www.fau.eu/education/international/from-abroad/welcome-programme-for-international-students/buddy-programme/)
+
+## Lectures
+
+The Chair and the Junior Professorship of Communication Studies offers various courses in English in both the Bachelor's and Master's programmes:
+
+| Programm | Title                                                                                                                               | Type    | Term            |
+|----------------|-------------------------|----------------|----------------|
+| Bachelor | [Digital Technologies & Society](https://www.kommunikationswissenschaft.rw.fau.de/lehre/bachelor/digital-technologies-and-society/) | Lecture | Summer          |
+| Bachelor | [Hot Topics in International Communication Research](https://www.kommunikationswissenschaft.rw.fau.de/lehre/bachelor/hot-topics/)   | Seminar | Summer & Winter |
+| Master   | [Media Psychology and Effects](https://www.kommunikationswissenschaft.rw.fau.de/lehre/master/media-psychology-and-effects/)         | Seminar | Winter          |
+
+## Contact
+![](https://github.com/faucommsci/dbd_2023/blob/main/img/team/ca-circle.png?raw=true){style="float:right;padding: 0 0 0 0px;" fig-alt="Headshot of Christoph Adrian" width="200"}
+
+**Christoph Adrian (he/him)**
+
+Contact person of the Chair and Assistant Professorship of Communication Science for organizational ERASMUS matters & Learning Agreements
+
+{{< bi house >}} <https://kowi.rw.fau.de/>
+
+{{< bi envelope >}} [christoph.adrian\@fau.de](mailto:christoph.adrian@fau.de)
+
+{{< bi telephone >}} 0911-530295618

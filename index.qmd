@@ -1,136 +1,61 @@
 ---
-title: ERASMUS-Programm
+title: Überblick
 ---
 
-Für das akademische Jahr 2023/2024 besteht für Studierende der Kommunikationswissenschaft die Möglichkeit, im Rahmen des ERASMUS-Programms an verschiedenen Partneruniversitäten im europäischen Ausland zu studieren.
+## Aktuelles & wichtige Termine
 
-::: callout-note
-## Allgemeine Informationen
+<!-- FIXED Nennung des Termins für die Infoveranstaltung im Department (normalerweise vor Beewrbunstermin). Ggf. Link zu International Day der Fakultät. Optional Hinweis auf RIA Infoveranstaltungen: https://www.fau.de/education/international/wege-ins-ausland/erste-schritte-zum-auslandsaufenthalt/informationsveranstaltungen/   (wird in Kürze aktualisiert) -->
 
--   Für das Bewerbungsverfahren um einen Platz an einer unserer Partneruniversitäten ist das [Büro für Internationale Beziehungen](https://ib.wiso.fau.de/) zuständig. Ausführliche Informationen zum Bewerbungsprozess finden Sie [hier](https://ib.wiso.fau.de/outgo/bewerbung/).
+Für das akademische Jahr 2024/2025 besteht für Studierende der Kommunikationswissenschaft die Möglichkeit, im Rahmen des ERASMUS-Programms an verschiedenen Partneruniversitäten der Lehrstuhls für Kommunikationswissenschaft im europäischen Ausland zu studieren.
 
--   Allgemeine Informationen zum Auslandsstudium finden Sie [hier](https://ib.wiso.fau.de/outgo/).
+-   07.11.2023 - [International Day](https://www.wiso-international-day.fau.de/)
+-   15.11.2023 - Freischaltung der Online-Bewerbung
+-   05.12.2023 - Bewerbungsschluss
 
--   Allgemeine Informationen zum ERASMUS-Programm finden Sie [hier](https://www.fau.de/international/internationalisierung/erasmus/).
-:::
+## Informationen für Outgoing Studierende
 
-## Kooperierende Universitäten
+klicken Sie [hier](outgoing.html) für:
 
-```{r session-setup}
-#| echo: false
-#| message: false
+-   eine Tabelle aller Partnerhochschulen für ERASMUS+ des Lehrstuhls, die Informationen zu verfügbaren Plätzen, Dauer des Aufenthalts und die Unterrichtssprachen anbieten.
+-   die allgemeinen und lehrstuhlspezifischen Teilnahmevoraussetzungen, vor und während des Auslandaufenthalts
+-   allgemeine Informationen zu Bewerbungsprozess und -unterlagen
+-   nützliche Informationen und Angebote zur Vorbereitung auf den Auslandsaufenthalt
 
-if (!require("pacman")) install.packages("pacman")
-pacman::p_load(
-    readr,
-    here, tidyverse, 
-    leaflet, raster, 
-    osmdata, osmextract,
-    glue,
-    gt
-)
-```
+### Weitere hilfreiche Links
 
-```{r import-db}
-#| echo: false
-#| message: false
+🔗 [Auslandsaufenthalte in Erasmus+ Programm- und Partnerländern](https://www.fau.de/education/international/wege-ins-ausland/studieren-im-ausland/erasmus-studium/)
 
-df <- read_delim(
-    here("data/universities-geo_locations.csv"), 
-    delim = ";",
-    escape_double = FALSE,
-    trim_ws = TRUE
-    ) %>%
-    rownames_to_column(var = "id") %>% 
-    mutate(
-        lat = str_split(lat_long, ",", simplify = TRUE)[,1], 
-        long = str_split(lat_long, ",", simplify = TRUE)[,2],
-        across(long, trimws), 
-        across(lat:long, as.numeric)
-    ) %>% 
-    mutate(
-        info = glue(
-            "<b><a href='{link}'>{uni}</a></b> <br>
-            {places} places each {duration} month <br> Courses in: {languages} <br>"
-        )
-    )
-```
+🔗 [Allgemeine Informationen zum Auslandsstudium](https://ib.wiso.fau.de/outgo/) 
 
-```{r create-icons}
-#| echo: false
-#| column: page
-icons <- awesomeIcons(
-    markerColor = "darkblue"
-)
+🔗 [Allgemeine Informationen zum ERASMUS-Programm](https://www.fau.de/international/internationalisierung/erasmus/)
 
-leaflet(df) %>%
-    addTiles() %>% 
-    addAwesomeMarkers(~long, ~lat, popup = ~info, icon = icons) 
-```
+## Information for Incoming students
 
-```{r create-table}
-#| echo: false
-#| column: page
-#
+click [here](incoming.html) for:
 
-df %>%
-    mutate(
-        duration = paste(duration, "months", sep = " "),
-        uni_link = glue("[{uni}]({link})"),
-        uni_link = map(uni_link, gt::md)
-    ) %>% 
-    dplyr::select(country, uni_link, places:languages) %>% 
-    gt::gt() %>% 
-    cols_label(
-        country = "Counry",
-        uni_link = "University", 
-        places = "Available places",
-        duration = "Duration of stay",
-        languages = "Courses teached in"
-    ) %>% 
-    gtExtras::gt_theme_nytimes()
-```
+-   helpful resources for incoming international students at a university.
+-   English-language courses offered by the Chair and Junior Professorship of Communication Studies.
 
-## Teilnahmevoraussetzungen
+### More helpful links
+🔗 [WiSo International Realtions Office](https://ib.wiso.fau.de/income/)
 
-::: callout-important
-## Bitte beachten
+🔗 [Courses offered by the Ziwis (Soft Skills)](https://www.ziwis.fau.eu/home/courses/key-qualifications/)
 
-Die Programme des Lehrstuhls für Kommunikationswissenschaft sind **ausschließlich sozialwissenschaftliche Austauschprogramme!**
-:::
+🔗 [German as a Foreign Language](https://sz.fau.eu/department-german/)
 
-### Vor dem Auslandsaufenthalt:
+🔗 [Exchange programme students at FAU](https://www.fau.eu/education/international/from-abroad/semester-abroad-at-fau/)
 
--   Erfolgreicher Abschluss **mindestens eines Moduls in Kommunikationswissenschaft** ([Lehrstuhl](https://www.kowi.rw.fau.de/studium/lehrangebot/) oder [Juniorprofessur](https://www.kommunikationswissenschaft.rw.fau.de/lehre/))
--   Zudem sollten die Bewerber:innen **ausreichende Kenntnisse der jeweiligen Landessprache bzw. gute Englischkenntnisse** mitbringen.
 
-### Während des Auslandsaufenthalts:
+## Kontakt
 
--   Erfolgreicher Abschluss mindestens einer kommunikationswissenschaftlichen Lehrveranstaltung an der speziellen Institution (Fakultät, Department, o.ä.) der jeweiligen Partneruniversität, mit der der Kooperationsvertrag besteht (siehe Liste der kooperierenden Universitäten).
--   Darüber hinaus sollte der Schwerpunkt der belegten Lehrveranstaltungen insgesamt auf kommunikationswissenschaftlichen bzw. sozialwissenschaftlichen Kursen aus dem Angebot der der speziellen Partnerinstitution liegen. Eine Belegung von Lehrveranstaltungen an anderen Fakultäten / Institutionen / Departments der Partneruniversität nur vereinzelt oder in einigen Fällen gar nicht möglich!
+![](https://github.com/faucommsci/dbd_2023/blob/main/img/team/ca-circle.png?raw=true){style="float:right;padding: 0 0 0 0px;" fig-alt="Headshot of Christoph Adrian" width="200"}
 
-## Bewerbung
+**Christoph Adrian (he/him)**
 
-Alle Bewerber reichen ihre Unterlagen beim [Büro für Internationale Beziehungen](https://ib.wiso.fau.de/) ein. Dort finden Sie auch alle Informationen zu den [notwendigen Bewerbungsunterlagen](https://ib.wiso.fau.de/outgo/bewerbung/).
+Ansprechpartner des Lehrstuhls für Kommuniationswissenschaft bei organisatorische und inhaltliche Angelegenheiten & Learning Agreements
 
-## Anrechnung der Studienleistungen
+{{< bi house >}} <https://kowi.rw.fau.de/>
 
-Für die Anerkennung von im Ausland erbrachten Studienleistungen gilt, dass diese sowohl inhaltlich als auch hinsichtlich des Arbeitsaufwands den Anforderungen des Lehrstuhls entsprechen müssen. Als Orientierung können die allgemeinen Informationen zu den Inhalten der kommunikationswissenschaftlichen Lehrveranstaltungen aus den [Modulhandbüchern](https://www.wiso.rw.fau.de/studium/im-studium/modulhandbuecher/) dienen.
+{{< bi envelope >}} [christoph.adrian\@fau.de](mailto:christoph.adrian@fau.de)
 
-### Learning Agreements
-
-Grundsätzlich gilt, dass die/der Studierende möglichst vor Antritt bzw. spätestens zu Beginn ihres/seines Auslandsaufenthaltes mit dem fachbetreuenden Lehrstuhl das für eine Anerkennung nötige Vorlesungsprogramm abzustimmen hat, soweit dies aufgrund der zur Verfügung stehenden Informationen der Gastuniversität möglich ist.
-
-Es empfiehlt sich daher, sich schon in der Bewerbungsphase Gedanken darüber zu machen, was an der Partnerhochschule studiert werden soll. Zur Absicherund der Vereinbarung dient das [Learning Agreement](https://ib.wiso.fau.de/outgo/vorbereitung/learning-agreements/).
-
-Anfragen für Learning Agreements reichen Sie bitte unter vollständiger Angabe folgender Informationen per [E-Mail](mailto:christoph.adrian@fau.de?subject=Learning%20Agreement) ein:
-
--   ausgefülltes Learning Agreement (Bitte nutzten Sie das [aktuelle Formular](https://ib.wiso.fau.de/outgo/vorbereitung/learning-agreements/) des Büros für internationale Beziehungen)
-
--   Ihre bereits belegte kommunikationswissenschaftliche Lehrveranstaltungen
-
--   Weblink zu der Kursbeschreibung des zur Anrechnung vorgeschlagenen Kurses der Zieluniversität (diese sollte beinhalten: Kurstitel, -inhalt und -umfang, Assessment, ECTS-Anzahl)
-
-### Hinweise für BA-Studierende
-
-Ein Auslandsstudium empfiehlt sich insbesondere für Studierende, die Kommunikationswissenschaft im Vertiefungsbereich wählen. Zwar lassen sich prinzipiell auch die Grundkurse im Ausland ablegen, diese müssen jedoch den vom Lehrstuhl angebotenen Lehrveranstaltungen entsprechen und Einführungscharakter haben. Da das Kursangebot im Ausland oftmals eingeschränkt ist, kann eine Anrechnung der Grundkurse nicht gewährleistet werden.
+{{< bi telephone >}} 0911-530295618

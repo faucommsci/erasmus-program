@@ -1,0 +1,201 @@
+---
+title: Informationen für Outgoing Studierende
+---
+::: callout-note
+## Allgemeine Informationen zu verfügbaren Plätzen und Partneruniversitäten der FAU
+
+<!-- FIXED Angabe zu den verfügbaren Plätzen und Partneruniversitäten in KA131 (Programmländern) und KA171 (Partnerländern), und Hinweis, dass je nach Zieluniversität ein anderes Sprachniveau gefordert wird, Verlinkung hierher: https://www.fau.de/education/international/wege-ins-ausland/studieren-im-ausland/erasmus-studium/erasmus-partnerhochschulen/  und hierher (Weltkarte) https://www.fau.de/education/international/wege-ins-ausland/studieren-im-ausland/  -->
+
+Die folgende interaktive Karte und Tabelle zeigen lediglich **die Partneruniversitäten des Lehrstuhls**. Einen Überblick über das Gesamtangebot an Auslandsplätzen der FAU erhalten Sie unter:
+
+🔗 [Partnerhochschulen für ERASMUS+](https://www.fau.de/education/international/wege-ins-ausland/studieren-im-ausland/erasmus-studium/erasmus-partnerhochschulen/) 
+
+🌍 [Interaktive Weltkarte](https://www.fau.de/education/international/wege-ins-ausland/studieren-im-ausland/)
+:::
+
+
+## Partneruniversitäten
+
+```{r session-setup}
+#| echo: false
+#| message: false
+
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load(
+    readr,
+    here, tidyverse, 
+    leaflet, raster, 
+    osmdata, osmextract,
+    glue,
+    gt
+)
+```
+
+```{r import-db}
+#| echo: false
+#| message: false
+
+df <- read_delim(
+    here("data/universities-geo_locations_de.csv"), 
+    delim = ";",
+    escape_double = FALSE,
+    trim_ws = TRUE
+    ) %>%
+    rownames_to_column(var = "id") %>% 
+    mutate(
+        lat = str_split(lat_long, ",", simplify = TRUE)[,1], 
+        long = str_split(lat_long, ",", simplify = TRUE)[,2],
+        across(long, trimws), 
+        across(lat:long, as.numeric)
+    ) %>% 
+    mutate(
+        info = glue(
+            "<b><a href='{link}'>{uni}</a></b> <br>
+            {places} places each {duration} month <br> Courses in: {languages} <br>"
+        )
+    )
+```
+
+```{r create-icons}
+#| echo: false
+#| column: page
+#| fig-align: center
+icons <- awesomeIcons(
+    markerColor = "darkblue"
+)
+
+leaflet(df) %>%
+    addTiles() %>% 
+    addAwesomeMarkers(~long, ~lat, popup = ~info, icon = icons) 
+```
+
+
+
+```{r create-table}
+#| echo: false
+#| column: page
+
+
+df %>%
+    mutate(
+        duration = paste(duration, "Monate", sep = " "),
+        uni_link = glue("[{uni}]({link})"),
+        uni_link = map(uni_link, gt::md)
+    ) %>% 
+    dplyr::select(country, uni_link, places:languages) %>% 
+    gt::gt() %>% 
+    cols_label(
+        country = "Land",
+        uni_link = "Universität", 
+        places = "Plätze",
+        duration = "Aufenthaltsdauer",
+        languages = "Kurse verfügbar in"
+    ) %>% 
+    gtExtras::gt_theme_nytimes()
+```
+
+## Teilnahmevoraussetzungen
+
+::: callout-important
+## Wichtige Hinweise
+
+<!-- FIXED Angaben zu Auswahlkriterien und deren Gewichtung, z.B. Notenschnitt, Sprachkenntnisse, ehrenamtliches Engagement an der FAU (z.B. als Buddy), Motivation -->
+
+-   Bitte beachten Sie die allgemeinen [Teilnahmevoraussetzungen](https://ib.wiso.fau.de/outgo/bewerbung/) für das Austauschprogramm auf der Seite des [Büro für Internationale Beziehungen](https://ib.wiso.fau.de/).
+-   Bei den Programme des Lehrstuhls für Kommunikationswissenschaft handelt es sich **ausschließlich** um **sozialwissenschaftliche Austauschprogramme!**
+:::
+
+### Vor dem Auslandsaufenthalt:
+
+-   Erfolgreicher Abschluss **mindestens eines Moduls in Kommunikationswissenschaft** ([Lehrstuhl](https://www.kowi.rw.fau.de/studium/lehrangebot/) oder [Juniorprofessur](https://www.kommunikationswissenschaft.rw.fau.de/lehre/))
+-   Zudem sollten die Bewerber:innen **ausreichende Kenntnisse der jeweiligen Landessprache bzw. gute Englischkenntnisse** mitbringen.
+
+### Während des Auslandsaufenthalts:
+
+-   Erfolgreicher Abschluss mindestens einer kommunikationswissenschaftlichen Lehrveranstaltung an der speziellen Institution (Fakultät, Department, o.ä.) der jeweiligen Partneruniversität, mit der der Kooperationsvertrag besteht (siehe Liste der kooperierenden Universitäten).
+-   Darüber hinaus sollte der Schwerpunkt der belegten Lehrveranstaltungen insgesamt auf kommunikationswissenschaftlichen bzw. sozialwissenschaftlichen Kursen aus dem Angebot der der speziellen Partnerinstitution liegen. Eine Belegung von Lehrveranstaltungen an anderen Fakultäten / Institutionen / Departments der Partneruniversität nur vereinzelt oder in einigen Fällen gar nicht möglich!
+
+## Bewerbungsverfahren
+
+Die Bewerbung für einen Platz an einer unserer Partneruniversitäten wird von dem [Büro für Internationale Beziehungen](https://ib.wiso.fau.de/) koordiniert. Dort finden Sie auch ausführliche [Informationen zum Bewerbungsprozess](https://ib.wiso.fau.de/outgo/bewerbung/).
+
+::: callout-note
+## Notwendige Bewerbungsunterlagen
+
+<!-- FIXED Auflistung Bewerbungsunterlagen (z.B. Notenauszug, CV, Motivationsschreiben) und Bewerbungsfrist für „Erste-Runde“ Bewerbungen für Aufenthalte im Wintersemester und Sommersemester sowie für eventuelle Restplätze (dann vorwiegend für Sommersemester). Empfehlung für die fachinterne Bewerbungsfrist ist Mitte Dezember. Kommentar zum Hintergrund für Sie (nicht für Studierende): die Frist für Meldung (sog. „Nominierung“) an S-International ist aktuell Mitte Februar und wird möglicherweise in den kommenden Jahren auf Mitte Januar vorverlegt aufgrund der frühen Mittelanfragsfrist bei der Nationalen Erasmus Agentur. -->
+
+Folgende Unterlagen müssen über das [Online-Portal](https://ib.wiso.fau.de/outgo/bewerbung/bewerbungsformular-outgoing/) des [Büro für Internationale Beziehungen](https://ib.wiso.fau.de/) im PDF-Format (max. 1MB pro Dokument) hochgeladen werden:
+
+-   aktuelle Immatrikulationsbescheinigung
+-   Motivationsschreiben (auf Deutsch oder Englisch, maximal 1 DinA4-Seite)
+-   tabellarischer Lebenslauf (auf Deutsch oder Englisch, maximal 2 DinA4-Seiten)
+-   Notenbelege:
+    -   für BA-Bewerber Notenausdruck aus [MeinCampus](https://www.campus.uni-erlangen.de/),
+    -   für MA-Bewerber inländisches BA-Zeugnis oder Kopie des ausländischen BA-Zeugnisses (offizielle Umrechnung wird intern nach der sog.Eignungsfeststellungsnote der Zulassungsstelle übertragen).
+-   Sprachnachweise (siehe Menüpunkt [[Sprachanforderungen]{.underline}](https://ib.wiso.fau.de/outgo/vorbereitung/sprachanforderungen-tests/))
+-   Nachweise über Praktika, soziales bzw. ehrenamtliches Engagement (maximal 2 Nachweise)
+:::
+
+## Anrechnung der Studienleistungen
+
+Für die Anerkennung von im Ausland erbrachten Studienleistungen gilt, dass diese sowohl inhaltlich als auch hinsichtlich des Arbeitsaufwands den Anforderungen des Lehrstuhls entsprechen müssen. Als Orientierung können die allgemeinen Informationen zu den Inhalten der kommunikationswissenschaftlichen Lehrveranstaltungen aus den [Modulhandbüchern](https://www.wiso.rw.fau.de/studium/im-studium/modulhandbuecher/) dienen.
+
+### Learning Agreements
+
+<!-- FIXME Angabe zuständige/r Erasmus Departmentkoordinator/in -->
+
+<!-- FIXME Angabe Unterschriftsbefugte/r für Learning Agreement for Studies (DLA) -->
+
+<!-- FIXME Beschreibung des Prozesesses der Anerkennung von Leistungen aus dem Ausland (oder Verlinkung auf dementsrepchende Webseite der Fakultät) und Benennung Anerkennungsbeauftragte/r -->
+
+<!-- FIXME Benennung von Beschwerdestelle (ggf .Departmentleitung) bei Kritik an Auswahl oder Anerkennungsprozess, ergänzende Verlinkung hierher: https://www.fau.de/fau/willkommen-an-der-fau/internationalisierung/erasmus/#collapse_35  -->
+
+Grundsätzlich gilt, dass die/der Studierende möglichst vor Antritt bzw. spätestens zu Beginn ihres/seines Auslandsaufenthaltes mit dem fachbetreuenden Lehrstuhl das für eine Anerkennung nötige Vorlesungsprogramm abzustimmen hat, soweit dies aufgrund der zur Verfügung stehenden Informationen der Gastuniversität möglich ist.
+
+Es empfiehlt sich daher, sich schon in der Bewerbungsphase Gedanken darüber zu machen, was an der Partnerhochschule studiert werden soll. Zur Absicherund der Vereinbarung dient das [Learning Agreement](https://ib.wiso.fau.de/outgo/vorbereitung/learning-agreements/).
+
+Anfragen für Learning Agreements reichen Sie bitte unter vollständiger Angabe folgender Informationen per [E-Mail](mailto:christoph.adrian@fau.de?subject=Learning%20Agreement) ein:
+
+-   ausgefülltes Learning Agreement (Bitte nutzten Sie das [aktuelle Formular](https://ib.wiso.fau.de/outgo/vorbereitung/learning-agreements/) des Büros für internationale Beziehungen)
+
+-   Ihre bereits belegte kommunikationswissenschaftliche Lehrveranstaltungen
+
+-   Weblink zu der Kursbeschreibung des zur Anrechnung vorgeschlagenen Kurses der Zieluniversität (diese sollte beinhalten: Kurstitel, -inhalt und -umfang, Assessment, ECTS-Anzahl)
+
+### Hinweise für BA-Studierende
+
+Ein Auslandsstudium empfiehlt sich insbesondere für Studierende, die Kommunikationswissenschaft im Vertiefungsbereich wählen. Zwar lassen sich prinzipiell auch die Grundkurse im Ausland ablegen, diese müssen jedoch den vom Lehrstuhl angebotenen Lehrveranstaltungen entsprechen und Einführungscharakter haben. Da das Kursangebot im Ausland oftmals eingeschränkt ist, kann eine Anrechnung der Grundkurse nicht gewährleistet werden.
+
+```{=html}
+<!-- TODO Check infos for: Praxisaufenthalte Studierende Erasmus (Optional) --\> 
+
+<!-- TODO Specifically for: Outgoing (kein Muss, aber herzliche Bitte, dies bekannt zu machen) -->
+```
+<!-- FIXME Hinweis, dass Praxisaufenthalte eine Alternative sein können zu einem Semesteraufenthalt zu Studienzwecken, da sie auch kürzer möglich sind und die sog. „Employability“ steigern; und Verlinkung: https://www.fau.de/education/international/wege-ins-ausland/praxisaufenthalt-im-ausland/  -->
+
+<!-- FIXME Hinweis: unter bestimmten Voraussetzungen kann man Erasmus Praktikums-Stipendien für Praktika und praktische Teile von Abschlussarbeiten beantragen, Verlinkung: https://www.fau.de/education/international/wege-ins-ausland/praxisaufenthalt-im-ausland/erasmus-praktika/  -->
+
+<!-- FIXME Nennung Unterschriftbefugte/r Learning agreement for Traineeship, und auch ggf., wenn vorhanden, Praktikumsamt oder Berater/in -->
+
+<!-- FIXME Infos über potentielle Anerkennung als Praxis-Modul, Abschlussarbeit oder als Soft skills, falls zutreffend bzw. in Prüfungsordnung vorgesehen -->
+
+## Sprachliche und interkulturelle Vorbereitung
+
+<!-- TODO Specifically for: Sprachliche und interkulturelle Vorbereitung (Optional aber sehr wünschenswert) -->
+
+<!-- FIXED Hinweis auf Wichtigkeit und Nützlichkeit der rechtzeitigen Vorbereitung auf den Auslandsaufenthalt und die Optionen, die die FAU dafür beitet, z.B. Hinweis auf Kurse Schlüssenqualifikationen (Interkulturelle Trainings z.B. des Ziwis oder auch im Sprachenzentrum (über campo auffindbar) https://www.ziwis.fau.de/lehre/schluesselqualifikationen/#collapse_1  -->
+
+<!-- FIXED Hinweis auf Sprachkurse Sprachenzentrum: https://sz.fau.de/sprachkurse/  -->
+
+<!-- FIXED Hinweis auf Erwerb Zertifikat Interkulturelle Kompetenz für Studierende: https://www.ziwis.fau.de/zertifikat-interkulturelle-kompetenz-fuer-studierende-zertifikationsprogamm/  -->
+
+<!-- FIXED Verlinkung zu Buddy Programm: https://www.fau.de/education/international/aus-dem-ausland-an-die-fau/willkommensangebote-fuer-internationale-studierende/buddy-programm/  -->
+
+Die rechtzeitige Vorbereitung auf den Auslandsaufenthalt ist ein nicht zu unterschätzender Teil des Austauschprozesses. Die FAU bietet dafür viele nützliche Optionen, z.B.
+
+-   Kurse zu bestimmten (z.B. Interkulturelle Trainings des [ZIWIS]((https://www.ziwis.fau.de/lehre/schluesselqualifikationen/#collapse_1%20)) oder auch im Sprachenzentrum (über campo auffindbar))
+-   [Sprachkurse](https://sz.fau.de/sprachkurse/) des Sprachenzentrums
+-   den Erwerb des Zertifikat [*Interkulturelle Kompetenz für Studierende*](https://www.ziwis.fau.de/zertifikat-interkulturelle-kompetenz-fuer-studierende-zertifikationsprogamm/)
+-   das [Buddy-Programm](https://www.fau.de/education/international/aus-dem-ausland-an-die-fau/willkommensangebote-fuer-internationale-studierende/buddy-programm/)
+
+#

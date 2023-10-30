@@ -19,17 +19,21 @@ website:
     right:
       - href: index.qmd
         text: Home
+      - href: outgoing.qmd
+        text: Outgoing
+      - href: incoming.qmd
+        text: Incoming      
       - href: about.qmd
         text: Kontakt
-      - icon: house
-        href: https://www.kowi.rw.fau.de/
-        aria-label: Homepage Lehrstuhl
-      - icon: house-fill
-        href: https://www.kommunikationswissenschaft.rw.fau.de/
-        aria-label: Homepage Juniorprofessur
+      # - icon: house
+      #   href: https://www.kowi.rw.fau.de/
+      #   aria-label: Homepage Lehrstuhl
+      # - icon: house-fill
+      #   href: https://www.kommunikationswissenschaft.rw.fau.de/
+      #   aria-label: Homepage Juniorprofessur
 
   page-footer: 
-    left: Lehrstuhl & Juniorprofessur für Kommunikationswissenschaft
+    left: "[Lehrstuhl](https://www.kowi.rw.fau.de/) & [Juniorprofessur](https://www.kommunikationswissenschaft.rw.fau.de/) für Kommunikationswissenschaft"
     right: "This page is built with ☕ & [Quarto](https://quarto.org/)."
 
 format:
