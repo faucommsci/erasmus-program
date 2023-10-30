@@ -5,12 +5,10 @@
   }
 
   .navbar-brand {
-    /* filter: drop-shadow(1px 1px 5px rgb(0 0 0 / 1)); */
     color: white !important;
   }
   
   .navbar-title {
-    /* filter: drop-shadow(1px 1px 5px rgb(0 0 0 / .5)); */
     font-size: larger;
     font-weight: bold;
     color: white !important;
