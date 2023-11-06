@@ -1,0 +1,77 @@
+/*-- scss:defaults --*/
+
+@import url(https://fonts.googleapis.com/css?family=News+Cycle:400,700); 
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic); 
+
+// fonts
+$font-family-sans-serif: Lato, sans-serif !default;
+$presentation-font-size-root: 30px !default;
+$presentation-heading-color: #C50F3C;
+
+// font sizes
+#TOC {
+  font-size: larger;
+  font-weight: bold !important;
+}
+
+// colors
+$body-bg: #fff !default;
+$body-color: #04316A !default;
+$link-color: #18B4F1 !default;
+$selection-bg: #C50F3C;
+$callout-color-note: #04316A;
+$callout-color-important: #C50F3C;
+$callout-color-tip: #18B4F1;
+
+// headings
+$presentation-heading-font: News Cycle, sans-serif !default;
+
+
+/*-- scss:rules --*/
+/* Hide the logo on the title slide */
+.title-slide .logo {
+  display: none;
+}
+
+.slide-logo {
+  display: block !important;
+  position: fixed !important;
+  top: 0 !important;
+  right: 10px !important;
+  max-height: 15% !important;
+  height: 12% !important;
+  width: auto !important;
+  color: $body-color !important;
+}
+
+.slide-number, .reveal.has-logo .slide-number {
+  bottom: 10px !important;
+  right: 10px !important;
+  top: unset !important;
+  color: $body-color !important;
+}
+
+
+// custom background classes
+
+//general l1 background
+.backgrounds .slide-background.slide.level1
+{
+  background-color: #C50F3C;
+}
+
+.reveal .header-logo {
+  display: block !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 1px !important;
+  max-height: 15% !important;
+  height: 5% !important;
+  width: auto !important;
+  color: $body-color !important;
+}
+
+// custom figure caption alignment
+.caption{
+  text-align: center;
+}

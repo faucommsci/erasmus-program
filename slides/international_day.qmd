@@ -1,0 +1,510 @@
+---
+title: "International Day 2023"
+subtitle: "ERASMUS-Auslandsstudium über den Lehrstuhl für Kommunikationswissenschaft"
+title-slide-attributes:
+  data-background-image: img/slide_bg-title.png
+  data-background-size: cover
+  data-background-color: "#04316a"
+
+author: 
+  - name: Christoph Adrian
+    url: https://faucommsci.github.io/erasmus-program/about.html
+
+format:
+  revealjs:
+    logo: ../img/lehrstuhl_logo.png   
+    footer: "[ERASMUS-Programm des Lehrstuhls](https://faucommsci.github.io/erasmus-program/)"
+    slide-number: true
+    preview-links: auto
+    theme: slidetheme.scss
+    template-partials:
+      - title-slide.html
+    chalkboard:
+      buttons: false
+
+highlight-style: atom-one
+
+execute:
+  echo: true
+
+csl: ../apa.csl
+
+editor_options: 
+  chunk_output_type: console
+---
+
+## Allgemeine Voraussetzungen
+
+::: {style="font-size: smaller;"}
+#### [Vor]{.underline} dem Auslandsaufenthalt:
+
+-   Erfolgreicher Abschluss [**mindestens**]{.underline} **eines Moduls der Kommunikationswissenschaft** (Beispiele)
+
+-   Gute Sprachkenntnisse (insbes. Spanien, Italien Frankreich) bzw. gute Englischkenntnisse ➞ **Level B2 erforderlich!**
+
+#### [Während]{.underline} des Auslandsaufenthalts
+
+-   Erfolgreicher Abschluss [**mindestens**]{.underline} **einer kommunikationswissenschaftlichen Lehrveranstaltung** an der Partnerfakultät.
+
+-   Schwerpunkt der belegten Lehrveranstaltungen auf kommunikationswissenschaftlichen Kursen.
+
+-   ⛔ Belegung von Lehrveranstaltungen an anderen Fakultäten der Partneruni **nur eingeschränkt oder gar nicht möglich**.
+:::
+
+## 15 Partneruniversitäten in 10 Ländern
+
+#### Angebot des Lehrstuhls für Kommunikationswissenschaft
+
+```{r session-setup}
+#| echo: false
+#| message: false
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load(
+    readr, qs,
+    here, tidyverse, 
+    leaflet, raster, sf,
+    osmdata, osmextract, 
+    glue,
+    gt, gtExtras
+)
+```
+
+```{r import-db}
+#| echo: false
+#| message: false
+
+# Loation of partner universities
+df <- qread(here("data/universities-geo_locations_de.qs"))
+
+# Country boarders provided by https://www.naturalearthdata.com/ 
+map_units  <- st_read(
+  here("data/ne_10m_admin_0_map_units/ne_10m_admin_0_map_units.shp"),
+  quiet = TRUE)
+
+countries <- st_read(
+  here("data/ne_10m_admin_0_countries/ne_10m_admin_0_countries.shp"),
+  quiet = TRUE)
+
+```
+
+```{r create-icons}
+#| echo: false
+#| column: page
+#| fig-align: center
+
+icons <- awesomeIcons(
+    markerColor = "darkblue"
+)
+
+leaflet(df) %>%
+    addTiles() %>% 
+    addAwesomeMarkers(~long, ~lat, popup = ~info, icon = icons) 
+```
+
+```{r custom-function-map}
+#| echo: false
+
+createCountryMap <- function(df, base, current_country_en, current_country_de) {
+  # Extract borders
+  country_border <- base %>% 
+    filter(NAME == current_country_en) 
+  
+  # Create map
+  df_filtered <- df %>% 
+    filter(country == current_country_de)
+  
+  map <- leaflet(df_filtered) %>%
+    addTiles() %>% 
+    addAwesomeMarkers(~long, ~lat, popup = ~info, icon = icons) %>% 
+    addPolygons(
+      data = country_border,
+      fillColor = "#C50F3C",
+      color = "#C50F3C",
+      fillOpacity = 0.2
+    ) %>% 
+    clearBounds()
+  
+  return(map)
+}
+```
+
+```{r custom-function-table}
+#| echo: false
+
+createCountryTable <- function(df, current_country_de) {
+  df %>%
+    filter(country == {{ current_country_de }}) %>% 
+    mutate(
+      duration = paste(duration, "Monate", sep = " "),
+      uni_link = glue("[{uni}]({link})"),
+      uni_link = map(uni_link, gt::md)
+    ) %>% 
+    dplyr::select(uni_link, places:languages, wise, sose) %>% 
+    gt::gt() %>% 
+    cols_label(
+      uni_link = "Universität", 
+      places = "Plätze",
+      duration = "Aufenthaltsdauer",
+      languages = "Kurse verfügbar in",
+      wise = "Wintersemester",
+      sose = "Sommersemester"
+    ) %>% 
+    tab_options(
+      table.width = gt::pct(100)
+    ) %>% 
+    gtExtras:: gt_theme_538()
+}
+```
+
+## 🇧🇪 Belgien
+
+```{r define-parameters-belgium}
+#| echo: false
+
+# define parameters
+current_country_en = "Belgium"
+current_country_de = "Belgien"
+```
+
+```{r map-belgium}
+#| echo: false
+#| fig-height: 4
+#| fig-align: right
+
+df %>% createCountryMap(countries, current_country_en, current_country_de)
+```
+
+```{r table-belgium}
+#| echo: false
+
+df %>% 
+  createCountryTable(current_country_de) %>% 
+  tab_footnote(
+    footnote = "⚠️ Kurse vorwiegend auf Niederländisch!",
+    placement = "right", 
+    locations = cells_body(
+      columns = 4, row = 2)
+  ) %>% 
+  gtExtras::gt_theme_538()
+```
+
+## 🇫🇮 Finnland
+
+```{r define-parameters-finland}
+#| echo: false
+
+# define parameters
+current_country_en = "Finland"
+current_country_de = "Finnland"
+```
+
+```{r map-finland}
+#| echo: false
+#| fig-height: 4
+#| fig-align: center
+#| column: page
+
+df %>% createCountryMap(map_units, current_country_en, current_country_de)
+```
+
+```{r table-finland}
+#| echo: false
+df %>% createCountryTable(current_country_de)
+```
+
+## 🇫🇷 Frankreich
+
+```{r define-parameters-france}
+#| echo: false
+
+# define parameters
+current_country_en = "France"
+current_country_de = "Frankreich"
+```
+
+```{r map-france}
+#| echo: false
+#| fig-height: 4
+#| fig-align: center
+
+df %>% createCountryMap(map_units, current_country_en, current_country_de)
+```
+
+```{r table-france}
+#| echo: false
+
+df %>%
+  createCountryTable(current_country_de) %>% 
+  tab_footnote(
+    footnote = "⚠️ Alles Kurse auf Französisch!",
+    placement = "right", 
+    locations = cells_column_labels(
+      columns = 4)
+  ) %>% 
+  gtExtras::gt_theme_538()
+```
+
+## 🇮🇹 Italien 
+
+```{r define-parameters-italy}
+#| echo: false
+
+# define parameters
+current_country_en = "Italy"
+current_country_de = "Italien"
+```
+
+```{r map-italy}
+#| echo: false
+#| fig-height: 4
+#| fig-align: center
+
+df %>% createCountryMap(map_units, current_country_en, current_country_de)
+```
+
+```{r table-italy}
+#| echo: false
+df %>%
+  createCountryTable(current_country_de) %>%
+  gtExtras::gt_highlight_rows(
+        rows = 3,
+        fill = "#18B4F1", 
+        alpha = 0.075,
+        font_weight = "normal",
+        bold_target_only = FALSE
+  ) %>% 
+  tab_footnote(
+    footnote = "Nur BA-Studierende",
+    placement = "right", 
+    locations = cells_body(
+      columns = 2, row = 3)
+  ) %>% 
+  tab_footnote(
+    footnote = "⚠️ Alles Kurse auf Italienisch!",
+    placement = "right", 
+    locations = cells_column_labels(
+      columns = 4)
+  ) %>% 
+  gtExtras::gt_theme_538()
+
+```
+
+## 🇱🇹 Litauen
+
+```{r define-parameters-lithuania}
+#| echo: false
+
+# define parameters
+current_country_en = "Lithuania"
+current_country_de = "Litauen"
+```
+
+```{r map-lithuania}
+#| echo: false
+#| fig-height: 4
+#| fig-align: center
+
+df %>% createCountryMap(map_units, current_country_en, current_country_de)
+```
+
+```{r table-lithuania}
+#| echo: false
+
+df %>% createCountryTable(current_country_de)
+```
+
+## 🇷🇴 Rumänien
+
+```{r define-parameters-romania}
+#| echo: false
+
+# define parameters
+current_country_en = "Romania"
+current_country_de = "Rumänien"
+```
+
+```{r map-romania}
+#| echo: false
+#| fig-height: 4
+#| fig-align: center
+
+df %>% createCountryMap(map_units, current_country_en, current_country_de)
+
+```
+
+```{r table-romania}
+#| echo: false
+
+df %>% createCountryTable(current_country_de)
+```
+
+## 🇸🇪 Schweden
+
+```{r define-parameters-sweden}
+#| echo: false
+
+# define parameters
+current_country_en = "Sweden"
+current_country_de = "Schweden"
+```
+
+```{r map-sweden}
+#| echo: false
+#| fig-height: 4
+#| fig-align: center
+
+df %>% createCountryMap(map_units, current_country_en, current_country_de)
+```
+
+```{r table-sweden}
+#| echo: false
+
+df %>% 
+  createCountryTable(current_country_de) %>% 
+  gtExtras::gt_highlight_rows(
+        rows = 1,
+        fill = "#18B4F1", 
+        alpha = 0.075,
+        font_weight = "normal",
+        bold_target_only = FALSE
+  ) %>% 
+  tab_footnote(
+    footnote = "Nur BA-Studierende",
+    placement = "right", 
+    locations = cells_body(
+      columns = 2, row = 1)
+  ) %>% 
+  gtExtras::gt_theme_538()
+```
+
+## 🇪🇸 Spanien
+
+```{r define-parameters-spain}
+#| echo: false
+
+# define parameters
+current_country_en = "Spain"
+current_country_de = "Spanien"
+```
+
+```{r map-spain}
+#| echo: false
+#| fig-height: 4
+#| fig-align: center
+
+df %>% createCountryMap(map_units, current_country_en, current_country_de)
+```
+
+```{r table-spain}
+#| echo: false
+
+df %>% 
+  createCountryTable(current_country_de) %>% 
+  gtExtras::gt_highlight_rows(
+        rows = 1,
+        fill = "#18B4F1", 
+        alpha = 0.075,
+        font_weight = "normal",
+        bold_target_only = FALSE
+  ) %>% 
+  tab_footnote(
+    footnote = "Nur BA-Studierende",
+    placement = "right", 
+    locations = cells_body(
+      columns = 2, row = 1)
+  ) %>% 
+  tab_footnote(
+    footnote = "⚠️ Alles Kurse auf Spanisch!",
+    placement = "right", 
+    locations = cells_column_labels(
+      columns = 4)
+  ) %>% 
+  gtExtras::gt_theme_538()
+```
+
+## 🇨🇿 Tschechische Republik
+
+```{r define-parameters-czechia}
+#| echo: false
+
+# define parameters
+current_country_en = "Czechia"
+current_country_de = "Tschechische Republik"
+```
+
+```{r map-czechia}
+#| echo: false
+#| fig-height: 4
+#| fig-align: center
+
+df %>% createCountryMap(map_units, current_country_en, current_country_de)
+```
+
+```{r table-czechia}
+#| echo: false
+
+df %>% createCountryTable(current_country_de)
+```
+
+## 🇹🇷 Türkei
+
+```{r define-parameters-turkey}
+#| echo: false
+
+# define parameters
+current_country_en = "Turkey"
+current_country_de = "Türkei"
+```
+
+```{r map-turkey}
+#| echo: false
+#| fig-height: 4
+#| fig-align: center
+
+df %>% createCountryMap(map_units, current_country_en, current_country_de)
+```
+
+```{r table-turkey}
+#| echo: false
+
+df %>% createCountryTable(current_country_de)
+```
+
+## Bewerbung
+
+#### Modalitäten und Ablauf
+
+::: {style="font-size: smaller;"}
+1.  Bewerbung für das akademische Jahr 2024/2025 (Winter- und Sommersemester) über das [**Online-Bewerbungsformular (ab 15.11. verfügbar)**](https://ib.wiso.fau.de/outgo/allgemeines/bewerbung/bewerbungsformular-outgoing/)des [Büros für Internationale Beziehungen](https://ib.wiso.fau.de/outgo/bewerbung/). Der Bewerbungsschluss ist **Dienstag, 5. Dezember 2023, 12.00 Uhr**
+2.  Nach Ende der Bewerbungsfrist werden alle Bewerbungen geprüft, die **Auswahl erfolgt im Januar/Februar.** Sie werden per E-Mail über die Auswahlentscheidung informiert.
+3.  Nach erfolgreicher Auswahl und Ihrer Zusage des Platzes werden Sie vom International Office an der jeweiligen Partnerhochschule offiziell **nominiert**.
+4.  Nach der Nominierung erfolgt die Bewerbung an Ihrer Zielhochschule. **Bitte beachten Sie, dass die endgültige Entscheidung über die Zulassung bei den Partnerhochschulen liegt.**
+5.  Nach Erhalt Ihres Zulassungsbescheides von der Partnerhochschule können Sie sich um die **weitere Organisation Ihres Studienaufenthalts kümmern** (individuelle Stipendien, Beurlaubung, Learning Agreements, etc.).
+6.  Tipp: Kontaktieren Sie auch die sich dort gerade aufhaltenden WiSo-Studierenden (z.B. über die [Facebookgruppe „Wege ins Ausland“](https://www.facebook.com/groups/wegeinsausland/?fref=ts) ).
+:::
+
+## Weitere Informationen
+
+::: {.callout-note appearance="simple"}
+Falls Sie über einen anderen Lehrstuhl ins Ausland gehen, können Sie sich genauso Studienleistungen im Bereich KoWi anrechnen lassen.
+:::
+
+::: {style="font-size: smaller;"}
+🔗 [ERASMUS-Programm des Lehrstuhls für Kommunikationswissenschaft](https://faucommsci.github.io/erasmus-program/)
+
+🔗 [Informationen zu unserer Partneruniversitäten](https://faucommsci.github.io/erasmus-program/outgoing.html)
+
+<br>
+
+![](https://github.com/faucommsci/dbd_2023/blob/main/img/team/ca-circle.png?raw=true){style="float:right;padding: 0 0 0 0px;" fig-alt="Headshot of Christoph Adrian" width="150"}
+
+**Christoph Adrian (he/him)**
+
+Ansprechpartner des Lehrstuhls für Kommuniationswissenschaft bei organisatorische und inhaltliche Angelegenheiten & Learning Agreements
+
+{{< bi house >}} <https://kowi.rw.fau.de/>
+
+{{< bi envelope >}} [christoph.adrian\@fau.de](mailto:christoph.adrian@fau.de)
+
+{{< bi telephone >}} 0911-530295618
+:::

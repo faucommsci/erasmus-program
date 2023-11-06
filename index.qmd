@@ -8,7 +8,7 @@ title: Überblick
 
 Für das akademische Jahr 2024/2025 besteht für Studierende der Kommunikationswissenschaft die Möglichkeit, im Rahmen des ERASMUS-Programms an verschiedenen Partneruniversitäten der Lehrstuhls für Kommunikationswissenschaft im europäischen Ausland zu studieren.
 
--   07.11.2023 - [International Day](https://www.wiso-international-day.fau.de/)
+-   07.11.2023 - [Präsentation](slides/international_day.html) im Rahmen des [International Day](https://www.wiso-international-day.fau.de/)
 -   15.11.2023 - Freischaltung der Online-Bewerbung
 -   05.12.2023 - Bewerbungsschluss
 
