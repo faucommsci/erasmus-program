@@ -475,7 +475,7 @@ df %>% createCountryTable(current_country_de)
 #### Modalitäten und Ablauf
 
 ::: {style="font-size: smaller;"}
-1.  Bewerbung für das akademische Jahr 2024/2025 (Winter- und Sommersemester) über das [**Online-Bewerbungsformular (ab 15.11. verfügbar)**](https://ib.wiso.fau.de/outgo/allgemeines/bewerbung/bewerbungsformular-outgoing/)des [Büros für Internationale Beziehungen](https://ib.wiso.fau.de/outgo/bewerbung/). Der Bewerbungsschluss ist **Dienstag, 5. Dezember 2023, 12.00 Uhr**
+1.  Bewerbung für das akademische Jahr 2024/2025 (Winter- und Sommersemester) über das [**Online-Bewerbungsformular (ab 15.11. verfügbar)**](https://ib.wiso.fau.de/outgo/allgemeines/bewerbung/bewerbungsformular-outgoing/) des [Büros für Internationale Beziehungen](https://ib.wiso.fau.de/outgo/bewerbung/). Der Bewerbungsschluss ist **Dienstag, 5. Dezember 2023, 12.00 Uhr**
 2.  Nach Ende der Bewerbungsfrist werden alle Bewerbungen geprüft, die **Auswahl erfolgt im Januar/Februar.** Sie werden per E-Mail über die Auswahlentscheidung informiert.
 3.  Nach erfolgreicher Auswahl und Ihrer Zusage des Platzes werden Sie vom International Office an der jeweiligen Partnerhochschule offiziell **nominiert**.
 4.  Nach der Nominierung erfolgt die Bewerbung an Ihrer Zielhochschule. **Bitte beachten Sie, dass die endgültige Entscheidung über die Zulassung bei den Partnerhochschulen liegt.**
