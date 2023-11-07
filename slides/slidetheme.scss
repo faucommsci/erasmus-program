@@ -75,3 +75,9 @@ $presentation-heading-font: News Cycle, sans-serif !default;
 .caption{
   text-align: center;
 }
+
+// qr-code
+.qrcode {
+  margin: 0 auto; // Set left and right margin to 'auto' to center-align
+  display: block; // Make it a block-level element to ensure center alignment
+}

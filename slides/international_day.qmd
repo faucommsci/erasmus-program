@@ -7,7 +7,7 @@ title-slide-attributes:
   data-background-color: "#04316a"
 
 author: 
-  - name: Christoph Adrian
+  - name: Christoph Adrian 
     url: https://faucommsci.github.io/erasmus-program/about.html
 
 format:
@@ -32,6 +32,22 @@ csl: ../apa.csl
 editor_options: 
   chunk_output_type: console
 ---
+
+## If you like, follow along!
+
+#### Mit QR-Code zur Präsentation
+
+::: columns
+::: {.column width="25%"}
+:::
+
+::: {.column width="50%"}
+{{< qrcode https://faucommsci.github.io/erasmus-program/slides/international_day.html width=400 height=400 colorDark='#C50F3C' >}}
+:::
+
+::: {.column width="25%"}
+:::
+:::
 
 ## Allgemeine Voraussetzungen
 
@@ -244,7 +260,7 @@ df %>%
   gtExtras::gt_theme_538()
 ```
 
-## 🇮🇹 Italien 
+## 🇮🇹 Italien
 
 ```{r define-parameters-italy}
 #| echo: false
