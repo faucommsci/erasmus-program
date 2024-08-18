@@ -103,7 +103,7 @@ df %>%
 <!-- FIXED Angaben zu Auswahlkriterien und deren Gewichtung, z.B. Notenschnitt, Sprachkenntnisse, ehrenamtliches Engagement an der FAU (z.B. als Buddy), Motivation -->
 
 -   Bitte beachten Sie die allgemeinen [Teilnahmevoraussetzungen](https://ib.wiso.fau.de/outgo/bewerbung/) für das Austauschprogramm auf der Seite des [Büro für Internationale Beziehungen](https://ib.wiso.fau.de/).
--   Bei den Programme des Lehrstuhls für Kommunikationswissenschaft handelt es sich **ausschließlich** um **sozialwissenschaftliche Austauschprogramme!**
+-   Bei den Programmen des Lehrstuhls für Kommunikationswissenschaft handelt es sich **ausschließlich** um **sozialwissenschaftliche Austauschprogramme!**
 :::
 
 ### Vor dem Auslandsaufenthalt:
@@ -132,7 +132,7 @@ Folgende Unterlagen müssen über das [Online-Portal](https://ib.wiso.fau.de/out
 -   tabellarischer Lebenslauf (auf Deutsch oder Englisch, maximal 2 DinA4-Seiten)
 -   Notenbelege:
     -   für BA-Bewerber Notenausdruck aus [MeinCampus](https://www.campus.uni-erlangen.de/),
-    -   für MA-Bewerber inländisches BA-Zeugnis oder Kopie des ausländischen BA-Zeugnisses (offizielle Umrechnung wird intern nach der sog.Eignungsfeststellungsnote der Zulassungsstelle übertragen).
+    -   für MA-Bewerber inländisches BA-Zeugnis oder Kopie des ausländischen BA-Zeugnisses (offizielle Umrechnung wird intern nach der sog. Eignungsfeststellungsnote der Zulassungsstelle übertragen).
 -   Sprachnachweise (siehe Menüpunkt [[Sprachanforderungen]{.underline}](https://ib.wiso.fau.de/outgo/vorbereitung/sprachanforderungen-tests/))
 -   Nachweise über Praktika, soziales bzw. ehrenamtliches Engagement (maximal 2 Nachweise)
 :::
@@ -147,13 +147,13 @@ Für die Anerkennung von im Ausland erbrachten Studienleistungen gilt, dass dies
 
 <!-- FIXME Angabe Unterschriftsbefugte/r für Learning Agreement for Studies (DLA) -->
 
-<!-- FIXME Beschreibung des Prozesesses der Anerkennung von Leistungen aus dem Ausland (oder Verlinkung auf dementsrepchende Webseite der Fakultät) und Benennung Anerkennungsbeauftragte/r -->
+<!-- FIXME Beschreibung des Prozesses der Anerkennung von Leistungen aus dem Ausland (oder Verlinkung auf dementsprechende Webseite der Fakultät) und Benennung Anerkennungsbeauftragte/r -->
 
 <!-- FIXME Benennung von Beschwerdestelle (ggf .Departmentleitung) bei Kritik an Auswahl oder Anerkennungsprozess, ergänzende Verlinkung hierher: https://www.fau.de/fau/willkommen-an-der-fau/internationalisierung/erasmus/#collapse_35  -->
 
 Grundsätzlich gilt, dass die/der Studierende möglichst vor Antritt bzw. spätestens zu Beginn ihres/seines Auslandsaufenthaltes mit dem fachbetreuenden Lehrstuhl das für eine Anerkennung nötige Vorlesungsprogramm abzustimmen hat, soweit dies aufgrund der zur Verfügung stehenden Informationen der Gastuniversität möglich ist.
 
-Es empfiehlt sich daher, sich schon in der Bewerbungsphase Gedanken darüber zu machen, was an der Partnerhochschule studiert werden soll. Zur Absicherund der Vereinbarung dient das [Learning Agreement](https://ib.wiso.fau.de/outgo/vorbereitung/learning-agreements/).
+Es empfiehlt sich daher, sich schon in der Bewerbungsphase Gedanken darüber zu machen, was an der Partnerhochschule studiert werden soll. Zur Absicherung der Vereinbarung dient das [Learning Agreement](https://ib.wiso.fau.de/outgo/vorbereitung/learning-agreements/).
 
 Anfragen für Learning Agreements reichen Sie bitte unter vollständiger Angabe folgender Informationen per [E-Mail](mailto:christoph.adrian@fau.de?subject=Learning%20Agreement) ein:
 
@@ -184,7 +184,7 @@ Ein Auslandsstudium empfiehlt sich insbesondere für Studierende, die Kommunikat
 
 <!-- TODO Specifically for: Sprachliche und interkulturelle Vorbereitung (Optional aber sehr wünschenswert) -->
 
-<!-- FIXED Hinweis auf Wichtigkeit und Nützlichkeit der rechtzeitigen Vorbereitung auf den Auslandsaufenthalt und die Optionen, die die FAU dafür beitet, z.B. Hinweis auf Kurse Schlüssenqualifikationen (Interkulturelle Trainings z.B. des Ziwis oder auch im Sprachenzentrum (über campo auffindbar) https://www.ziwis.fau.de/lehre/schluesselqualifikationen/#collapse_1  -->
+<!-- FIXED Hinweis auf Wichtigkeit und Nützlichkeit der rechtzeitigen Vorbereitung auf den Auslandsaufenthalt und die Optionen, die die FAU dafür beitet, z.B. Hinweis auf Kurse Schlüsselqualifikationen (Interkulturelle Trainings z.B. des Ziwis oder auch im Sprachenzentrum (über campo auffindbar) https://www.ziwis.fau.de/lehre/schluesselqualifikationen/#collapse_1  -->
 
 <!-- FIXED Hinweis auf Sprachkurse Sprachenzentrum: https://sz.fau.de/sprachkurse/  -->
 
