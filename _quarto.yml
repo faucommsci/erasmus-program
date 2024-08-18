@@ -24,7 +24,7 @@ website:
       - href: incoming.qmd
         text: Incoming      
       - href: about.qmd
-        text: Kontakt
+        text: Contact
       # - icon: house
       #   href: https://www.kowi.rw.fau.de/
       #   aria-label: Homepage Lehrstuhl
