@@ -4,7 +4,7 @@ title: Überblick
 
 ## Aktuelles & wichtige Termine
 
-<!-- FIXED Nennung des Termins für die Infoveranstaltung im Department (normalerweise vor Beewrbunstermin). Ggf. Link zu International Day der Fakultät. Optional Hinweis auf RIA Infoveranstaltungen: https://www.fau.de/education/international/wege-ins-ausland/erste-schritte-zum-auslandsaufenthalt/informationsveranstaltungen/   (wird in Kürze aktualisiert) -->
+<!-- FIXED Nennung des Termins für die Infoveranstaltung im Department (normalerweise vor Bewerbungstermin). Ggf. Link zu International Day der Fakultät. Optional Hinweis auf RIA Infoveranstaltungen: https://www.fau.de/education/international/wege-ins-ausland/erste-schritte-zum-auslandsaufenthalt/informationsveranstaltungen/   (wird in Kürze aktualisiert) -->
 
 Für das akademische Jahr 2024/2025 besteht für Studierende der Kommunikationswissenschaft die Möglichkeit, im Rahmen des ERASMUS-Programms an verschiedenen Partneruniversitäten der Lehrstuhls für Kommunikationswissenschaft im europäischen Ausland zu studieren.
 
@@ -52,7 +52,7 @@ click [here](incoming.html) for:
 
 **Christoph Adrian (he/him)**
 
-Ansprechpartner des Lehrstuhls für Kommuniationswissenschaft bei organisatorische und inhaltliche Angelegenheiten & Learning Agreements
+Ansprechpartner des Lehrstuhls für Kommunikationswissenschaft bei organisatorische und inhaltliche Angelegenheiten & Learning Agreements
 
 {{< bi house >}} <https://kowi.rw.fau.de/>
 
