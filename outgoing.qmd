@@ -123,7 +123,7 @@ Die Bewerbung für einen Platz an einer unserer Partneruniversitäten wird von d
 ::: callout-note
 ## Notwendige Bewerbungsunterlagen
 
-<!-- FIXED Auflistung Bewerbungsunterlagen (z.B. Notenauszug, CV, Motivationsschreiben) und Bewerbungsfrist für „Erste-Runde“ Bewerbungen für Aufenthalte im Wintersemester und Sommersemester sowie für eventuelle Restplätze (dann vorwiegend für Sommersemester). Empfehlung für die fachinterne Bewerbungsfrist ist Mitte Dezember. Kommentar zum Hintergrund für Sie (nicht für Studierende): die Frist für Meldung (sog. „Nominierung“) an S-International ist aktuell Mitte Februar und wird möglicherweise in den kommenden Jahren auf Mitte Januar vorverlegt aufgrund der frühen Mittelanfragsfrist bei der Nationalen Erasmus Agentur. -->
+<!-- FIXED Auflistung Bewerbungsunterlagen (z.B. Notenauszug, CV, Motivationsschreiben) und Bewerbungsfrist für „Erste-Runde“ Bewerbungen für Aufenthalte im Wintersemester und Sommersemester sowie für eventuelle Restplätze (dann vorwiegend für Sommersemester). Empfehlung für die fachinterne Bewerbungsfrist ist Mitte Dezember. Kommentar zum Hintergrund für Sie (nicht für Studierende): die Frist für Meldung (sog. „Nominierung“) an S-International ist aktuell Mitte Februar und wird möglicherweise in den kommenden Jahren auf Mitte Januar vorverlegt aufgrund der frühen Mittelanfragefrist bei der Nationalen Erasmus Agentur. -->
 
 Folgende Unterlagen müssen über das [Online-Portal](https://ib.wiso.fau.de/outgo/bewerbung/bewerbungsformular-outgoing/) des [Büro für Internationale Beziehungen](https://ib.wiso.fau.de/) im PDF-Format (max. 1MB pro Dokument) hochgeladen werden:
 
