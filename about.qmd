@@ -1,7 +1,7 @@
 ---
 title: "Kontaktperson"
 subtitle: "Christoph Adrian"
-image: https://www.kowi.rw.fau.de/files/2016/08/chris_profile_square_2-e1637099789697-240x320.png
+image: https://raw.githubusercontent.com/faucommsci/dbd_2023/main/img/team/ca.png
 about:
   template: jolla
   links:
