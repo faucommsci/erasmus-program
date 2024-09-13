@@ -1,6 +1,7 @@
 ---
 title: Informationen für Outgoing Studierende
 ---
+
 ::: callout-note
 ## Allgemeine Informationen zu verfügbaren Plätzen und Partneruniversitäten der FAU
 
@@ -12,7 +13,6 @@ Die folgende interaktive Karte und Tabelle zeigen lediglich **die Partnerunivers
 
 🌍 [Interaktive Weltkarte](https://www.fau.de/education/international/wege-ins-ausland/studieren-im-ausland/)
 :::
-
 
 ## Partneruniversitäten
 
@@ -31,7 +31,7 @@ pacman::p_load(
 )
 ```
 
-```{r optional-create-new-qs-data} 
+```{r optional-create-new-qs-data}
 #| echo: false
 #| eval: false
 source(here("R/data-creation.r"))
@@ -55,6 +55,7 @@ leaflet(df) %>%
     addTiles() %>% 
     addAwesomeMarkers(~long, ~lat, popup = ~info, icon = icons) 
 ```
+
 <!-- FIXME Exclude Poland as cooperation is apparently over -->
 
 ```{r create-table}
@@ -106,10 +107,12 @@ df %>%
 -   Bei den Programmen des Lehrstuhls für Kommunikationswissenschaft handelt es sich **ausschließlich** um **sozialwissenschaftliche Austauschprogramme!**
 :::
 
-### Vor dem Auslandsaufenthalt:
+::: callout-warning
+### Vor dem Auslandsaufenthalt
 
 -   Erfolgreicher Abschluss **mindestens eines Moduls in Kommunikationswissenschaft** ([Lehrstuhl](https://www.kowi.rw.fau.de/studium/lehrangebot/) oder [Juniorprofessur](https://www.kommunikationswissenschaft.rw.fau.de/lehre/))
 -   Zudem sollten die Bewerber:innen **ausreichende Kenntnisse der jeweiligen Landessprache bzw. gute Englischkenntnisse** mitbringen.
+:::
 
 ### Während des Auslandsaufenthalts:
 
@@ -167,11 +170,10 @@ Anfragen für Learning Agreements reichen Sie bitte unter vollständiger Angabe 
 
 Ein Auslandsstudium empfiehlt sich insbesondere für Studierende, die Kommunikationswissenschaft im Vertiefungsbereich wählen. Zwar lassen sich prinzipiell auch die Grundkurse im Ausland ablegen, diese müssen jedoch den vom Lehrstuhl angebotenen Lehrveranstaltungen entsprechen und Einführungscharakter haben. Da das Kursangebot im Ausland oftmals eingeschränkt ist, kann eine Anrechnung der Grundkurse nicht gewährleistet werden.
 
-```{=html}
 <!-- TODO Check infos for: Praxisaufenthalte Studierende Erasmus (Optional) --\> 
 
 <!-- TODO Specifically for: Outgoing (kein Muss, aber herzliche Bitte, dies bekannt zu machen) -->
-```
+
 <!-- FIXME Hinweis, dass Praxisaufenthalte eine Alternative sein können zu einem Semesteraufenthalt zu Studienzwecken, da sie auch kürzer möglich sind und die sog. „Employability“ steigern; und Verlinkung: https://www.fau.de/education/international/wege-ins-ausland/praxisaufenthalt-im-ausland/  -->
 
 <!-- FIXME Hinweis: unter bestimmten Voraussetzungen kann man Erasmus Praktikums-Stipendien für Praktika und praktische Teile von Abschlussarbeiten beantragen, Verlinkung: https://www.fau.de/education/international/wege-ins-ausland/praxisaufenthalt-im-ausland/erasmus-praktika/  -->
