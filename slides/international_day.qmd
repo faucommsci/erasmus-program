@@ -17,8 +17,6 @@ format:
     slide-number: true
     preview-links: auto
     theme: slidetheme.scss
-    template-partials:
-      - title-slide.html
     chalkboard:
       buttons: false
 
