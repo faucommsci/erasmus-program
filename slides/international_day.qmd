@@ -294,7 +294,7 @@ df %>%
       columns = 2, row = 3)
   ) %>% 
   tab_footnote(
-    footnote = "⚠️ Alles Kurse auf Italienisch!",
+    footnote = "⚠️ Alle Kurse auf Italienisch!",
     placement = "right", 
     locations = cells_column_labels(
       columns = 4)
@@ -428,7 +428,7 @@ df %>%
       columns = 2, row = 1)
   ) %>% 
   tab_footnote(
-    footnote = "⚠️ Alles Kurse auf Spanisch!",
+    footnote = "⚠️ Alle Kurse auf Spanisch!",
     placement = "right", 
     locations = cells_column_labels(
       columns = 4)
