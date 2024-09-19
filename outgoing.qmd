@@ -107,17 +107,22 @@ df %>%
 -   Bei den Programmen des Lehrstuhls für Kommunikationswissenschaft handelt es sich **ausschließlich** um **sozialwissenschaftliche Austauschprogramme!**
 :::
 
+### Vor dem Auslandsaufenthalt:
 ::: callout-warning
-### Vor dem Auslandsaufenthalt
+#### Wichtig! Bitte unbedingt beachten!
 
--   Erfolgreicher Abschluss **mindestens eines Moduls in Kommunikationswissenschaft** ([Lehrstuhl](https://www.kowi.rw.fau.de/studium/lehrangebot/) oder [Juniorprofessur](https://www.kommunikationswissenschaft.rw.fau.de/lehre/))
+-   Erfolgreicher Abschluss **mindestens eines Moduls in Kommunikationswissenschaft** ([Lehrstuhl](https://www.kowi.rw.fau.de/studium/lehrangebot/) oder [Juniorprofessur](https://www.kommunikationswissenschaft.rw.fau.de/lehre/)). Gilt **sowohl für Bachelor- als auch Masterstudierende**.
 -   Zudem sollten die Bewerber:innen **ausreichende Kenntnisse der jeweiligen Landessprache bzw. gute Englischkenntnisse** mitbringen.
 :::
 
 ### Während des Auslandsaufenthalts:
 
 -   Erfolgreicher Abschluss mindestens einer kommunikationswissenschaftlichen Lehrveranstaltung an der speziellen Institution (Fakultät, Department, o.ä.) der jeweiligen Partneruniversität, mit der der Kooperationsvertrag besteht (siehe Liste der kooperierenden Universitäten).
--   Darüber hinaus sollte der Schwerpunkt der belegten Lehrveranstaltungen insgesamt auf kommunikationswissenschaftlichen bzw. sozialwissenschaftlichen Kursen aus dem Angebot der der speziellen Partnerinstitution liegen. Eine Belegung von Lehrveranstaltungen an anderen Fakultäten / Institutionen / Departments der Partneruniversität nur vereinzelt oder in einigen Fällen gar nicht möglich!
+-   Darüber hinaus sollte der Schwerpunkt der belegten Lehrveranstaltungen insgesamt auf kommunikationswissenschaftlichen bzw. sozialwissenschaftlichen Kursen aus dem Angebot der der speziellen Partnerinstitution liegen. Eine Belegung von Lehrveranstaltungen an anderen Fakultäten / Institutionen / Departments der Partneruniversität nur vereinzelt oder in einigen Fällen gar nicht möglich!quar
+
+### Nach dem Auslandsaufenthalt:
+
+-   Nach dem Auslandsaufenthalt stehen noch einige Schritte an, um die erbrachten Leistungen eintragen und umrechnen zu lassen. Hilfreiche Informationen dazu finden Sie im Abschnitt [Anrechnung der Studienleistungen]
 
 ## Bewerbungsverfahren
 
@@ -144,13 +149,11 @@ Folgende Unterlagen müssen über das [Online-Portal](https://ib.wiso.fau.de/out
 
 Für die Anerkennung von im Ausland erbrachten Studienleistungen gilt, dass diese sowohl inhaltlich als auch hinsichtlich des Arbeitsaufwands den Anforderungen des Lehrstuhls entsprechen müssen. Als Orientierung können die allgemeinen Informationen zu den Inhalten der kommunikationswissenschaftlichen Lehrveranstaltungen aus den [Modulhandbüchern](https://www.wiso.rw.fau.de/studium/im-studium/modulhandbuecher/) dienen.
 
-Nach dem Auslandsaufenthalt stehen noch einige Schritte an um die erbrachten Leistungen eintragen und umrechnen zu lassen.
-Hilfreich sind dafür die Übersichten in den folgenden Links:
+Weitere hilfreiche Informationen (z.B. zur Notenumrechnung oder den jeweiligen Ansprechpartner:innen der einzelnen Lehrstühle) finden Sie unter:
 
-🔗 [Information zur Leistungsanrechnung sowie Notenumrechnung]( https://ib.wiso.fau.de/outgo/nach-dem-aufenthalt/anrechnung/)
+🔗 [Information zur Leistungsanrechnung sowie Notenumrechnung](https://ib.wiso.fau.de/outgo/nach-dem-aufenthalt/anrechnung/)
 
-🔗 [Ansprechparnter:innen der einzelnen Studiengänge für die Anerkennungen in der WiSo]( https://ib.wiso.fau.de/outgo/nach-dem-aufenthalt/ansprechpartner-anerkennung-wiso/) 
-
+🔗 [Ansprechparnter:innen der einzelnen Studiengänge für die Anerkennungen in der WiSo](https://ib.wiso.fau.de/outgo/nach-dem-aufenthalt/ansprechpartner-anerkennung-wiso/)
 
 ### Learning Agreements
 
