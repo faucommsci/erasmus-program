@@ -52,7 +52,7 @@ editor_options:
 ::: {style="font-size: smaller;"}
 #### [Vor]{.underline} dem Auslandsaufenthalt:
 
--   Erfolgreicher Abschluss [**mindestens**]{.underline} **eines Moduls der Kommunikationswissenschaft** ([Lehrangebot des Lehrstuhls](https://www.kowi.rw.fau.de/lehre/))
+-   Erfolgreicher Abschluss [**mindestens**]{.underline} **eines Moduls der Kommunikationswissenschaft** ([Lehrangebot des Lehrstuhls & der Juniorprofessur](https://www.kowi.rw.fau.de/lehre/))
 
 -   Gute Sprachkenntnisse (insbes. Spanien, Italien Frankreich) bzw. gute Englischkenntnisse ➞ **Level B2 erforderlich!**
 
@@ -519,6 +519,4 @@ Ansprechpartner des Lehrstuhls für Kommuniationswissenschaft bei organisatorisc
 {{< bi house >}} <https://kowi.rw.fau.de/>
 
 {{< bi envelope >}} [christoph.adrian\@fau.de](mailto:christoph.adrian@fau.de)
-
-{{< bi telephone >}} 0911-530295618
 :::
