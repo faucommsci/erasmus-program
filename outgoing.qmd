@@ -5,8 +5,6 @@ title: Informationen für Outgoing Studierende
 ::: callout-note
 ## Allgemeine Informationen zu verfügbaren Plätzen und Partneruniversitäten der FAU
 
-<!-- FIXED Angabe zu den verfügbaren Plätzen und Partneruniversitäten in KA131 (Programmländern) und KA171 (Partnerländern), und Hinweis, dass je nach Zieluniversität ein anderes Sprachniveau gefordert wird, Verlinkung hierher: https://www.fau.de/education/international/wege-ins-ausland/studieren-im-ausland/erasmus-studium/erasmus-partnerhochschulen/  und hierher (Weltkarte) https://www.fau.de/education/international/wege-ins-ausland/studieren-im-ausland/  -->
-
 Die folgende interaktive Karte und Tabelle zeigen lediglich **die Partneruniversitäten des Lehrstuhls**. Einen Überblick über das Gesamtangebot an Auslandsplätzen der FAU erhalten Sie unter:
 
 🔗 [Partnerhochschulen für ERASMUS+](https://www.fau.de/education/international/wege-ins-ausland/studieren-im-ausland/erasmus-studium/erasmus-partnerhochschulen/) 
@@ -101,8 +99,6 @@ df %>%
 ::: callout-important
 ## Wichtige Hinweise
 
-<!-- FIXED Angaben zu Auswahlkriterien und deren Gewichtung, z.B. Notenschnitt, Sprachkenntnisse, ehrenamtliches Engagement an der FAU (z.B. als Buddy), Motivation -->
-
 -   Bitte beachten Sie die allgemeinen [Teilnahmevoraussetzungen](https://ib.wiso.fau.de/outgo/bewerbung/) für das Austauschprogramm auf der Seite des [Büro für Internationale Beziehungen](https://ib.wiso.fau.de/).
 -   Bei den Programmen des Lehrstuhls für Kommunikationswissenschaft handelt es sich **ausschließlich** um **sozialwissenschaftliche Austauschprogramme!**
 :::
@@ -111,7 +107,7 @@ df %>%
 ::: callout-warning
 #### Wichtig! Bitte unbedingt beachten!
 
--   Erfolgreicher Abschluss **mindestens eines Moduls in Kommunikationswissenschaft** ([Lehrstuhl](https://www.kowi.rw.fau.de/studium/lehrangebot/) oder [Juniorprofessur](https://www.kommunikationswissenschaft.rw.fau.de/lehre/)). Gilt **sowohl für Bachelor- als auch Masterstudierende**.
+-   Erfolgreicher Abschluss **mindestens eines Moduls in Kommunikationswissenschaft** ([Lehrstuhl](https://www.kowi.rw.fau.de/lehre/) oder [Juniorprofessur](https://www.kommunikationswissenschaft.rw.fau.de/lehre/)). Gilt **sowohl für Bachelor- als auch Masterstudierende**.
 -   Zudem sollten die Bewerber:innen **ausreichende Kenntnisse der jeweiligen Landessprache bzw. gute Englischkenntnisse** mitbringen.
 :::
 
