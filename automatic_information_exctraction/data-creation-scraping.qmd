@@ -1,0 +1,125 @@
+---
+title: "Automatic information extraction"
+subtitle: "Scrape information about ERASMUS partner from the webpage of the international office"
+format: html
+execute: 
+  eval: false
+---
+
+## Preparation
+
+```{r setup-session}
+pacman::p_load(
+  here, fs, 
+  rvest, httr, xml2,
+  pdftools, stringr, qpdf,
+  purrr,
+  gt, gtExtras,
+  tidyverse
+)
+```
+
+## Get URLs of ERASMUS partner countries
+
+```{r create-data-erasmus_country_urls} 
+# Specify the base URL
+base_url <- "https://ib.wiso.fau.de/outgo/wege-ins-ausland/partneruniversitaeten/erasmus/"
+
+# Read the webpage
+webpage <- read_html(base_url)
+
+# Extract all links that start with the specified prefix, but exclude the base URL itself
+erasmus_countries_urls <- webpage %>%
+  html_nodes("a") %>%
+  html_attr("href") %>%
+  .[grepl(paste0("^", base_url), .) & . != base_url]
+
+# Check URLs
+erasmus_countries_urls 
+```
+
+## Create dataset with partner universities
+
+### Define scraping function
+
+```{r function-scraping_partner_universities}
+# Function to scrape data from a single URL
+scrape_partner_universities <- function(url) {
+  # Extract country from the URL
+  country <- url %>% str_extract(., "[^/]+(?=/$)") 
+  
+  # Read the webpage
+  webpage <- read_html(url)
+  
+  # Extract all tables with the class "partnerUni"
+  partner_tables <- webpage %>%
+    html_nodes("table.partnerUni") %>%
+    html_table(fill = TRUE)
+  
+  # Check if any tables were found
+  if (length(partner_tables) == 0) {
+    # Return an empty data frame with the "Country" column if no tables are found
+    return(data.frame(Country = character(0)))
+  }
+  
+  # Process the tables
+  processed_tables <- lapply(partner_tables, function(table) {
+    # Rename columns and transpose the table
+    df <- as.data.frame(t(table))
+    colnames(df) <- df[1, ]   # Set the first row as column names
+    df <- df[-1, ]            # Remove the first row
+    df$Country <- country     # Add the country column
+    return(df)
+  })
+  
+  # Combine all tables for this URL by rows
+  combined_data <- bind_rows(processed_tables)
+  
+  # Add country column at the start
+  combined_data <- combined_data %>% select(Country, everything())
+  
+  return(combined_data)
+}
+```
+
+### Get data
+
+```{r scrape-partner-unis}
+partner_unis <- map_dfr(erasmus_countries_urls, scrape_partner_universities) %>% 
+    janitor::clean_names()
+```
+
+
+## Extract relevant partner universities
+
+```{r output-partners}
+partner_unis %>% 
+    filter(hochschulbetreuer == "Meier") %>% 
+    select(country:unterrichtssprache) %>% gt()
+```
+
+### Check mandatory requirements
+
+```{r output-mandatory-requirements-kowi}
+partner_unis %>% 
+    filter(hochschulbetreuer == "Meier") %>% 
+    select(country:universitat, voraussetzung, anerkannte_leistungen_weitere_moglich) %>%
+    gt() %>% 
+    gtExtras::gt_theme_538()
+```
+
+#### of other chairs
+
+```{r output-mandatory-requirements}
+partner_unis %>% 
+    mutate(
+        across(voraussetzung, ~str_to_lower(.)),
+        across(voraussetzung, ~str_trim(.)), 
+        across(voraussetzung, ~str_squish(.))
+    ) %>% 
+    sjmisc::frq(voraussetzung) %>% 
+    data.frame() %>%
+    select(val, frq) %>% 
+    arrange(-frq) %>%  
+    gt()
+```
