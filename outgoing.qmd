@@ -104,10 +104,13 @@ df %>%
 :::
 
 ### Vor dem Auslandsaufenthalt:
+
 ::: callout-warning
 #### Wichtig! Bitte unbedingt beachten!
 
--   Erfolgreicher Abschluss **mindestens eines Moduls in Kommunikationswissenschaft** ([Lehrstuhl](https://www.kowi.rw.fau.de/lehre/) oder [Juniorprofessur](https://www.kommunikationswissenschaft.rw.fau.de/lehre/)). Gilt **sowohl für Bachelor- als auch Masterstudierende**.
+-   Erfolgreicher Abschluss **mindestens eines Moduls in Kommunikationswissenschaft** ([Lehrstuhl](https://www.kowi.rw.fau.de/lehre/) oder [Juniorprofessur](https://www.kommunikationswissenschaft.rw.fau.de/lehre/)). Gilt **sowohl für Bachelor- als auch Masterstudierende**. **Für *Bachelor*studierenden empfiehlt sich insbesondere der Besuch von einer unserer Vorlesungen**:
+    -   [📖 Medien und Kommunikation](https://www.kowi.rw.fau.de/lehre/bachelor/medien-und-kommunikation/)
+    -   [📖 Digital Technologies & Society](https://www.kowi.rw.fau.de/lehre/bachelor/digital-technologies-and-society/)
 -   Zudem sollten die Bewerber:innen **ausreichende Kenntnisse der jeweiligen Landessprache bzw. gute Englischkenntnisse** mitbringen.
 :::
 
@@ -177,9 +180,11 @@ Anfragen für Learning Agreements reichen Sie bitte unter vollständiger Angabe 
 
 Ein Auslandsstudium empfiehlt sich insbesondere für Studierende, die Kommunikationswissenschaft im Vertiefungsbereich wählen. Zwar lassen sich prinzipiell auch die Grundkurse im Ausland ablegen, diese müssen jedoch den vom Lehrstuhl angebotenen Lehrveranstaltungen entsprechen und Einführungscharakter haben. Da das Kursangebot im Ausland oftmals eingeschränkt ist, kann eine Anrechnung der Grundkurse nicht gewährleistet werden.
 
+```{=html}
 <!-- TODO Check infos for: Praxisaufenthalte Studierende Erasmus (Optional) --\> 
 
 <!-- TODO Specifically for: Outgoing (kein Muss, aber herzliche Bitte, dies bekannt zu machen) -->
+```
 
 <!-- FIXME Hinweis, dass Praxisaufenthalte eine Alternative sein können zu einem Semesteraufenthalt zu Studienzwecken, da sie auch kürzer möglich sind und die sog. „Employability“ steigern; und Verlinkung: https://www.fau.de/education/international/wege-ins-ausland/praxisaufenthalt-im-ausland/  -->
 
