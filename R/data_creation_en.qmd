@@ -1,0 +1,33 @@
+---
+title: "Untitled"
+format: html
+---
+
+```{r}
+## Import the raw data
+df_en <- read_delim(
+    here("E://02_leuner//erasmus-program//erasmus-program//data//universities-geo_locations_en_e.csv"), 
+    delim = ";",
+    escape_double = FALSE,
+    trim_ws = TRUE
+    ) %>%
+    # wrangle data
+    rownames_to_column(var = "id") %>% 
+    mutate(
+        lat = str_split(lat_long, ",", simplify = TRUE)[,1], 
+        long = str_split(lat_long, ",", simplify = TRUE)[,2],
+        across(long, trimws), 
+        across(lat:long, as.numeric),
+        info = glue(
+            "<b><a href='{link}'>{uni}</a></b> <br>
+            {places} places each {duration} month <br> Courses in: {languages} <br>"
+        )
+    ) %>% 
+    arrange(country) %>% 
+    # drop universities with no active contract
+    filter(country != "Polen")
+
+## Export qs-data
+qsave(df_en, file = here("data/universities-geo_locations_en.qs"))
+```
+

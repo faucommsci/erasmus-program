@@ -117,7 +117,7 @@ df %>%
 ### Während des Auslandsaufenthalts:
 
 -   Erfolgreicher Abschluss mindestens einer kommunikationswissenschaftlichen Lehrveranstaltung an der speziellen Institution (Fakultät, Department, o.ä.) der jeweiligen Partneruniversität, mit der der Kooperationsvertrag besteht (siehe Liste der kooperierenden Universitäten).
--   Darüber hinaus sollte der Schwerpunkt der belegten Lehrveranstaltungen insgesamt auf kommunikationswissenschaftlichen bzw. sozialwissenschaftlichen Kursen aus dem Angebot der der speziellen Partnerinstitution liegen. Eine Belegung von Lehrveranstaltungen an anderen Fakultäten / Institutionen / Departments der Partneruniversität nur vereinzelt oder in einigen Fällen gar nicht möglich!quar
+-   Darüber hinaus sollte der Schwerpunkt der belegten Lehrveranstaltungen insgesamt auf kommunikationswissenschaftlichen bzw. sozialwissenschaftlichen Kursen aus dem Angebot der der speziellen Partnerinstitution liegen. Eine Belegung von Lehrveranstaltungen an anderen Fakultäten / Institutionen / Departments der Partneruniversität nur vereinzelt oder in einigen Fällen gar nicht möglich!
 
 ### Nach dem Auslandsaufenthalt:
 
@@ -202,15 +202,15 @@ Ein Auslandsstudium empfiehlt sich insbesondere für Studierende, die Kommunikat
 
 <!-- FIXED Hinweis auf Sprachkurse Sprachenzentrum: https://sz.fau.de/sprachkurse/  -->
 
-<!-- FIXED Hinweis auf Erwerb Zertifikat Interkulturelle Kompetenz für Studierende: https://www.ziwis.fau.de/zertifikat-interkulturelle-kompetenz-fuer-studierende-zertifikationsprogamm/  -->
+<!-- FIXED Hinweis auf Erwerb Zertifikat Interkulturelle Kompetenz für Studierende: https://www.ziwis.fau.de/zertifikat-interkulturelle-kompetenz-fuer-studierende-zertifikationsprogamm/  es gibt noch keine Englische Seite-->
 
 <!-- FIXED Verlinkung zu Buddy Programm: https://www.fau.de/education/international/aus-dem-ausland-an-die-fau/willkommensangebote-fuer-internationale-studierende/buddy-programm/  -->
 
 Die rechtzeitige Vorbereitung auf den Auslandsaufenthalt ist ein nicht zu unterschätzender Teil des Austauschprozesses. Die FAU bietet dafür viele nützliche Optionen, z.B.
 
--   Kurse zu bestimmten (z.B. Interkulturelle Trainings des [ZIWIS]((https://www.ziwis.fau.de/lehre/schluesselqualifikationen/#collapse_1%20)) oder auch im Sprachenzentrum (über campo auffindbar))
--   [Sprachkurse](https://sz.fau.de/sprachkurse/) des Sprachenzentrums
--   den Erwerb des Zertifikat [*Interkulturelle Kompetenz für Studierende*](https://www.ziwis.fau.de/zertifikat-interkulturelle-kompetenz-fuer-studierende-zertifikationsprogamm/)
--   das [Buddy-Programm](https://www.fau.de/education/international/aus-dem-ausland-an-die-fau/willkommensangebote-fuer-internationale-studierende/buddy-programm/)
+-   Kurse zu bestimmten (z.B. Interkulturelle Trainings des [ZIWIS](https://www.ziwis.fau.eu/home/courses/key-qualifications/) oder auch im Sprachenzentrum (über campo auffindbar))
+-   [Sprachkurse](https://sz.fau.eu/courses/) des Sprachenzentrums
+-   den Erwerb des Zertifikat [*Interkulturelle Kompetenz für Studierende*](https://www.ziwis.fau.de/zertifikat-interkulturelle-kompetenz-fuer-studierende-zertifikationsprogamm/) 
+-   [Buddy programme](https://www.fau.de/education/international/aus-dem-ausland-an-die-fau/willkommensangebote-fuer-internationale-studierende/buddy-programm/)
 
 #

@@ -1,5 +1,5 @@
 ---
-title: "Kontaktperson"
+title: "Contact person"
 subtitle: "Christoph Adrian"
 image: https://raw.githubusercontent.com/faucommsci/dbd_2023/main/img/team/ca.png
 about:
@@ -15,7 +15,4 @@ about:
       text: 0911-530295618  
 ---
 
-Ansprechpartner bei organisatorische und inhaltliche Angelegenheiten & Learning Agreements
-<p>
 Contact person for organizational and content-related ERASMUS matters & Learning Agreements
-
