@@ -9,7 +9,7 @@ pacman::p_load(
 )
 
 ## Import the raw data
-df <- read_delim(
+df_de <- read_delim(
     here("data/universities-geo_locations_de.csv"), 
     delim = ";",
     escape_double = FALSE,
@@ -29,7 +29,36 @@ df <- read_delim(
     ) %>% 
     arrange(country) %>% 
     # drop universities with no active contract
-    filter(country != "Polen")
+    filter(country != "Finland")
 
 ## Export qs-data
-qsave(df, file = here("data/universities-geo_locations_de.qs"))
+qsave(df_de, file = here("data/universities-geo_locations_de.qs"))
+
+
+## Import the raw data
+df_en <- read_delim(
+    here("data/universities-geo_locations_en.csv"), 
+    delim = ";",
+    escape_double = FALSE,
+    trim_ws = TRUE
+    ) %>%
+    # wrangle data
+    rownames_to_column(var = "id") %>% 
+    mutate(
+        lat = str_split(lat_long, ",", simplify = TRUE)[,1], 
+        long = str_split(lat_long, ",", simplify = TRUE)[,2],
+        across(long, trimws), 
+        across(lat:long, as.numeric),
+        info = glue(
+            "<b><a href='{link}'>{uni}</a></b> <br>
+            {places} places each {duration} month <br> Courses in: {languages} <br>"
+        )
+    ) %>% 
+    arrange(country) %>% 
+    # drop universities with no active contract
+    filter(country != "Finland")
+
+## Export qs-data
+qsave(df_en, file = here("data/universities-geo_locations_en.qs"))
+
+
