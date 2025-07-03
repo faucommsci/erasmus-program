@@ -1,33 +1,34 @@
 ---
-title: Überblick
+title: "Overview"
+format: html
 ---
 
-## Aktuelles & wichtige Termine
+## News and important dates
 
 <!-- FIXED Nennung des Termins für die Infoveranstaltung im Department (normalerweise vor Bewerbungstermin). Ggf. Link zu International Day der Fakultät. Optional Hinweis auf RIA Infoveranstaltungen: https://www.fau.de/education/international/wege-ins-ausland/erste-schritte-zum-auslandsaufenthalt/informationsveranstaltungen/   (wird in Kürze aktualisiert) -->
 
-Für das akademische Jahr 2024/2025 besteht für Studierende der Kommunikationswissenschaft die Möglichkeit, im Rahmen des ERASMUS-Programms an verschiedenen Partneruniversitäten der Lehrstuhls für Kommunikationswissenschaft im europäischen Ausland zu studieren.
+For the academic year 2024/2025, Communication Science students have the opportunity to study at various partner universities of the [Chair of Communication Science](https://www.kowi.rw.fau.de/) in other European countries as part of the ERASMUS program. Please take note of the following important dates:
 
--   05.11.2024 - [Präsentation](slides/international_day.html) im Rahmen des [International Day](https://www.wiso-international-day.fau.de/)
--   15.11.2024 - Freischaltung der Online-Bewerbung
--   05.12.2024 - Bewerbungsschluss
+-   05.11.2024 - [Presentation](slides/international_day.html) as part of the [International Day](https://www.wiso-international-day.fau.de/)
+-   15.11.2024 - Activation of the online application
+-   05.12.2024 - Application deadline
 
-## Informationen für Outgoing Studierende
+## Information for Outgoing students
 
-klicken Sie [hier](outgoing.html) für:
+click [here](outgoing.html) for:
 
--   eine Tabelle aller Partnerhochschulen für ERASMUS+ des Lehrstuhls, die Informationen zu verfügbaren Plätzen, Dauer des Aufenthalts und die Unterrichtssprachen anbieten.
--   die allgemeinen und lehrstuhlspezifischen Teilnahmevoraussetzungen, vor und während des Auslandaufenthalts
--   allgemeine Informationen zu Bewerbungsprozess und -unterlagen
--   nützliche Informationen und Angebote zur Vorbereitung auf den Auslandsaufenthalt
+-   a chart of all partner universities for ERASMUS+ of the chair, providing information on available places, duration of stay and languages of teaching
+-   general and chair-specific participation requirements, before and during the stay abroad
+-   general information on the application process and documents
+-   useful information and offers to prepare yourself for your stay abroad
 
-### Weitere hilfreiche Links
+### More helpful links
 
-🔗 [Auslandsaufenthalte in Erasmus+ Programm- und Partnerländern](https://www.fau.de/education/international/wege-ins-ausland/studieren-im-ausland/erasmus-studium/)
+🔗 [Study abroad in Erasmus programme and partner countries](https://www.fau.eu/education/international/going-abroad/studying-abroad/the-erasmus-programme/)
 
-🔗 [Allgemeine Informationen zum Auslandsstudium](https://ib.wiso.fau.de/outgo/) 
+🔗 [General information about studying abroad](https://ib.wiso.fau.de/en/outgo/)
 
-🔗 [Allgemeine Informationen zum ERASMUS-Programm](https://www.fau.de/international/internationalisierung/erasmus/)
+🔗 [Overview of the ERASMUS programme](https://www.fau.eu/fau/welcome-to-fau/internationalisation/erasmus/)
 
 ## Information for Incoming students
 
@@ -37,6 +38,7 @@ click [here](incoming.html) for:
 -   English-language courses offered by the Chair and Junior Professorship of Communication Studies.
 
 ### More helpful links
+
 🔗 [WiSo International Realtions Office](https://ib.wiso.fau.de/income/)
 
 🔗 [Courses offered by the Ziwis (Soft Skills)](https://www.ziwis.fau.eu/home/courses/key-qualifications/)
@@ -45,17 +47,13 @@ click [here](incoming.html) for:
 
 🔗 [Exchange programme students at FAU](https://www.fau.eu/education/international/from-abroad/semester-abroad-at-fau/)
 
+## Contact
 
-## Kontakt
+::: callout-important
+Please send all emails with inquiries regarding Learning Agreements or other ERASMUS-related matters to: 
+[wiso-erasmus-kowi\@fau.de](mailto:wiso-erasmus-kowi@fau.de)
+:::
 
-![](https://github.com/faucommsci/dbd_2023/blob/main/img/team/ca-circle.png?raw=true){style="float:right;padding: 0 0 0 0px;" fig-alt="Headshot of Christoph Adrian" width="200"}
+**Julius Klingelhöfer (he/him)**
 
-**Christoph Adrian (he/him)**
-
-Ansprechpartner des Lehrstuhls für Kommunikationswissenschaft bei organisatorische und inhaltliche Angelegenheiten & Learning Agreements
-
-{{< bi house >}} <https://kowi.rw.fau.de/>
-
-{{< bi envelope >}} [christoph.adrian\@fau.de](mailto:christoph.adrian@fau.de)
-
-{{< bi telephone >}} 0911-530295618
+Contact person for organizational and content-related ERASMUS matters & Learning Agreements.

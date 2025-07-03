@@ -23,14 +23,12 @@ The Chair and the Junior Professorship of Communication Studies offers various c
 | Master   | [Media Psychology and Effects](https://www.kommunikationswissenschaft.rw.fau.de/lehre/master/media-psychology-and-effects/)         | Seminar | Winter          |
 
 ## Contact
-![](https://github.com/faucommsci/dbd_2023/blob/main/img/team/ca-circle.png?raw=true){style="float:right;padding: 0 0 0 0px;" fig-alt="Headshot of Christoph Adrian" width="200"}
 
-**Christoph Adrian (he/him)**
+::: callout-important
+Please send all emails with inquiries regarding Learning Agreements or other ERASMUS-related matters to: 
+[wiso-erasmus-kowi\@fau.de](mailto:wiso-erasmus-kowi@fau.de)
+:::
 
-Contact person of the Chair and Assistant Professorship of Communication Science for organizational ERASMUS matters & Learning Agreements
+**Julius Klingelhöfer (he/him)**
 
-{{< bi house >}} <https://kowi.rw.fau.de/>
-
-{{< bi envelope >}} [christoph.adrian\@fau.de](mailto:christoph.adrian@fau.de)
-
-{{< bi telephone >}} 0911-530295618
+Contact person for organizational and content-related ERASMUS matters & Learning Agreements.

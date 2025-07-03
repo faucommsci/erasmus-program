@@ -5,7 +5,7 @@ title: Information for Outgoing Students
 ::: callout-note
 ## Information on available places and partner universities of the FAU
 
-The interactive map and table below only show the **Partner universities of the Chair for Communication Science** You can find an overview of all the places abroad offered by FAU at:
+The interactive map and table below only show the **partner universities of the Chair for Communication Science**. You can find an overview of all the places abroad offered by FAU at:
 
 🔗 [Partner universities for ERASMUS+](https://www.fau.de/education/international/wege-ins-ausland/studieren-im-ausland/erasmus-studium/erasmus-partnerhochschulen/) 
 
@@ -32,15 +32,13 @@ pacman::p_load(
 ```{r optional-create-new-qs-data}
 #| echo: false
 #| eval: false
-
-source(here:("C://Users//leuner//erasmus-program//erasmus-program//R//data_creation_en.R")
-source(here("R/data-data_creation.r"))
+source(here("R/data-creation.r"))
 ```
 
 ```{r import-db}
 #| echo: false
 #| message: false
-df_en_2 <- qread(here("data/universities-geo_locations_en_e2.qs"))
+df_en <- qread(here("data/universities-geo_locations_en.qs"))
 ```
 
 ```{r create-icons}
@@ -54,8 +52,13 @@ icons <- awesomeIcons(
 leaflet(df_en) %>%
     addTiles() %>% 
     addAwesomeMarkers(~long, ~lat, popup = ~info, icon = icons) 
+```
 
+```{r create-icons-troubleshooting}
+#| echo: false
+#| eval: false
 invalid_rows <- which(!validUTF8(df_en$info))
+
 # Zeige problematische Zeilen an
 df_en[invalid_rows, ]
 df_en$info <- iconv(df_en$info, from = "unknown", to = "UTF-8", sub = "byte")
@@ -67,8 +70,6 @@ unknown_encoding_rows <- which(Encoding(df_en$info) == "unknown")
 df_en[unknown_encoding_rows, ]
 df_en$info <- iconv(df_en$info, from = "windows-1252", to = "UTF-8", sub = "byte")
 ```
-
-<!-- FIXME Exclude Poland as cooperation is apparently over -->
 
 ```{r create-table}
 #| echo: false
@@ -115,8 +116,8 @@ df_en %>%
 ::: callout-important
 ## Important notes
 
--   Please note the general [eligibility requirements](https://ib.wiso.fau.de/en/outgo/application/) for the exchange programme on the website of the [International Relations Office](https://ib.wiso.fau.de/en/).
--   The programmes of the chair of Communication Science are **exclusively social science exchange programmes!**\
+-   Please note the general [eligibility requirements](https://ib.wiso.fau.de/en/outgo/application/) for the exchange program on the website of the [International Relations Office](https://ib.wiso.fau.de/en/).
+-   The programs of the Chair of Communication Science are **exclusively social science exchange programs!**\
 :::
 
 ### Before the stay:
@@ -124,7 +125,7 @@ df_en %>%
 ::: callout-warning
 #### Important! Please note the following:
 
--   Successful completion of **at least one module in Communication Science**([Chair](https://www.commsci.rw.fau.eu/teaching/) oder [Assistant Professorship](https://www.kommunikationswissenschaft.rw.fau.de/lehre/)). Applies **to both Bachelor's and Master's students**. **For *Bachelor* students, we particularly recommend attending one of our lectures**:
+-   Successful completion of **at least one module in Communication Science** ([Chair](https://www.commsci.rw.fau.eu/teaching/) or [Assistant Professorship](https://www.kommunikationswissenschaft.rw.fau.de/lehre/)). Applies **to both Bachelor's and Master's students**. **For *Bachelor* students, we particularly recommend attending one of our lectures**:
     -   [📖 Medien und Kommunikation](https://www.kowi.rw.fau.de/lehre/bachelor/medien-und-kommunikation/)
     -   [📖 Digital Technologies & Society](https://www.kowi.rw.fau.de/lehre/bachelor/digital-technologies-and-society/)
 -   Applicants should also have **sufficient knowledge of the respective national language or a good command of English**.
@@ -132,8 +133,8 @@ df_en %>%
 
 ### During the stay:
 
--   Successful completion of at least one communication studies course at the specific institution (faculty, department, etc.) of the respective partner university with which the cooperation agreement exists (see list of cooperating universities).
--   In addition, the overall focus of the courses taken should be on communication science or social science courses from the programme of the specific partner institution. Taking courses at other faculties / institutions / departments of the partner university is only possible in occasional cases or in some cases not at all!
+-   Successful completion of at least one communication science course at the specific institution (faculty, department, etc.) of the respective partner university with which the cooperation agreement exists (see list of cooperating universities).
+-   In addition, the overall focus of the courses taken should be on communication science or social science courses from the program of the specific partner institution. Taking courses at other faculties / institutions / departments of the partner university is only possible in occasional cases or in some cases not at all!
 
 ### After the stay:
 
@@ -150,21 +151,21 @@ The application for a place at one of our partner universities is coordinated by
 
 The following documents must be uploaded via the [online portal](https://ib.wiso.fau.de/outgo/bewerbung/bewerbungsformular-outgoing/) of the [International Relations Office](https://ib.wiso.fau.de/en/) in PDF format (max. 1MB per document):
 
--   Current certificate of enrolment
+-   Current certificate of enrollment
 -   Letter of motivation (in German or English, maximum 1 A4 page)
 -   Curriculum vitae in tabular form (in German or English, maximum 2 A4 pages)
 -   Grades documents:
     -   for BA applicants grade transcript from [MeinCampus](https://www.campus.uni-erlangen.de/qisserver/pages/cs/sys/portal/hisinoneStartPage.faces)),
     -   for MA applicants German BA transcript or copy of the international BA transcript (official conversion is transferred internally according to the so-called Eignungsfeststellungsnote of the FAU admission office).
--   Language certificates (see \[[Language Requirements]{.underline}\])(https://ib.wiso.fau.de/en/outgo/preparations/language-skills-tests/)
+-   Language certificates (see [[Language Requirements]{.underline}](https://ib.wiso.fau.de/en/outgo/preparations/language-skills-tests/)[)]{.underline}
 -   Proof of internships, social or volunteer work (maximum 2 proofs)
 :::
 
 ## Accrediation of academic achievements
 
-For accrediation the academic achievements must meet the requirements of the chair in terms of content and workload. As a guideline, the general information about the contents of the communication science courses can be found in the [module handbooks](https://www.wiso.rw.fau.eu/study/current-students/module-handbooks/).
+For accreditation the academic achievements must meet the requirements of the chair in terms of content and workload. As a guideline, the general information about the contents of the communication science courses can be found in the [module handbooks](https://www.wiso.rw.fau.eu/study/current-students/module-handbooks/).
 
-Further helpful information (e.g., regarding grade transfer or the respective contact persons of the individual departments) can be found at::
+Further helpful information (e.g., regarding grade transfer or the respective contact persons of the individual departments) can be found at:
 
 🔗 [Information on Accrediation and grade transfer](https://ib.wiso.fau.de/en/outgo/nach-dem-aufenthalt/accreditation-grade-transfer/)
 
@@ -227,6 +228,6 @@ In time preparations for studying abroad is a part of the exchange process that 
 -   Courses on specific topics (e.g. intercultural training at [ZIWIS]((https://www.ziwis.fau.eu/home/courses/key-qualifications/)) or at the Language Centre (can be found via campo))
 -   [Language Courses](https://sz.fau.eu/courses/) offered by the Language Centre
 -   acquisition of the certificate [*Intercultural Competence for Students*](https://www.ziwis.fau.de/zertifikat-interkulturelle-kompetenz-fuer-studierende-zertifikationsprogamm/)
--   [Buddy programme](https://www.fau.de/education/international/aus-dem-ausland-an-die-fau/willkommensangebote-fuer-internationale-studierende/buddy-programm/)
+-   [Buddy program](https://www.fau.de/education/international/aus-dem-ausland-an-die-fau/willkommensangebote-fuer-internationale-studierende/buddy-programm/)
 
 #

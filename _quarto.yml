@@ -1,6 +1,11 @@
 project:
   type: website
   output-dir: docs
+  render:
+    - "*.qmd"      # Render all other .qmd files
+    - "!R/**" # Exclude all files in folders starting with "local_"
+    - "!automatic_information_exctraction/**" # Exclude all files in folders starting with "local_"
+
 
 website:
   title: "ERASMUS-Programm der Kommunikationswissenschaft"
@@ -19,12 +24,12 @@ website:
     right:
       - href: index.qmd
         text: Home
-      - href: outgoing.qmd
+      - href: outgoing_en.qmd
         text: Outgoing
-      - href: incoming.qmd
+      - href: incoming_en.qmd
         text: Incoming      
-      - href: about.qmd
-        text: Contact
+      # - href: about.qmd
+      #  text: Contact
       # - icon: house
       #   href: https://www.kowi.rw.fau.de/
       #   aria-label: Homepage Lehrstuhl
