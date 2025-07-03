@@ -40,11 +40,13 @@ vignettes/*.pdf
 .Renviron
 
 
-# translation temp files
-po/*~
 
 # RStudio Connect folder
 rsconnect/
 
+# Quarto
 /.quarto/
+
+# Manual
 _freeze
+.DS_Store
