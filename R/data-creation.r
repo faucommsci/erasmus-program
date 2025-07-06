@@ -36,12 +36,9 @@ qsave(df_de, file = here("data/universities-geo_locations_de.qs"))
 
 
 ## Import the raw data
-df_en <- read_delim(
-    here("data/universities-geo_locations_en.csv"), 
-    delim = ";",
-    escape_double = FALSE,
-    trim_ws = TRUE
-    ) %>%
+df_en <- readxl::read_excel(
+    here("data", "universities-geo_locations_en.xlsx")
+    ) %>% 
     # wrangle data
     rownames_to_column(var = "id") %>% 
     mutate(
