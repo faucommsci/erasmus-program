@@ -138,7 +138,7 @@ df_en %>%
 
 ### After the stay:
 
--   After your stay abroad, there are still a few steps to take in order to have your credits entered and converted. You can find helpful information on this in the section [Accrediation of academic achievements]
+-   After your stay abroad, there are still a few steps to take in order to have your credits entered and converted. You can find helpful information on this in the section [Accreditation of academic achievements].
 
 ## Application process
 
@@ -155,19 +155,19 @@ The following documents must be uploaded via the [online portal](https://ib.wiso
 -   Letter of motivation (in German or English, maximum 1 A4 page)
 -   Curriculum vitae in tabular form (in German or English, maximum 2 A4 pages)
 -   Grades documents:
-    -   for BA applicants grade transcript from [MeinCampus](https://www.campus.uni-erlangen.de/qisserver/pages/cs/sys/portal/hisinoneStartPage.faces)),
-    -   for MA applicants German BA transcript or copy of the international BA transcript (official conversion is transferred internally according to the so-called Eignungsfeststellungsnote of the FAU admission office).
--   Language certificates (see [[Language Requirements]{.underline}](https://ib.wiso.fau.de/en/outgo/preparations/language-skills-tests/)[)]{.underline}
+    -   for BA applicants, grade transcript from [MeinCampus](https://www.campus.uni-erlangen.de/qisserver/pages/cs/sys/portal/hisinoneStartPage.faces)),
+    -   for MA applicants, a German BA transcript or copy of the international BA transcript (official conversion is transferred internally according to the so-called Eignungsfeststellungsnote of the FAU admission office).
+-   Language certificates (see \[[Language Requirements]{.underline}\])(https://ib.wiso.fau.de/en/outgo/preparations/language-skills-tests/)
 -   Proof of internships, social or volunteer work (maximum 2 proofs)
 :::
 
-## Accrediation of academic achievements
+## Accreditation of academic achievements
 
 For accreditation the academic achievements must meet the requirements of the chair in terms of content and workload. As a guideline, the general information about the contents of the communication science courses can be found in the [module handbooks](https://www.wiso.rw.fau.eu/study/current-students/module-handbooks/).
 
 Further helpful information (e.g., regarding grade transfer or the respective contact persons of the individual departments) can be found at:
 
-🔗 [Information on Accrediation and grade transfer](https://ib.wiso.fau.de/en/outgo/nach-dem-aufenthalt/accreditation-grade-transfer/)
+🔗 [Information on Accreditation and grade transfer](https://ib.wiso.fau.de/en/outgo/nach-dem-aufenthalt/accreditation-grade-transfer/)
 
 🔗 [Contacts of the individual departments at WiSo](https://ib.wiso.fau.de/outgo/nach-dem-aufenthalt/ansprechpartner-anerkennung-wiso/)
 
@@ -187,15 +187,15 @@ It is therefore advisable to think about what is to be studied at the partner un
 
 Please submit requests for Learning Agreements via [E-Mail](mailto:christoph.adrian@fau.de?subject=Learning%20Agreement), providing the following information in full:
 
--   completed Learning Agreement (Please use the [current form](https://ib.wiso.fau.de/en/outgo/preparations/learning-agreements/) of the International Relations Office)
+-   Completed Learning Agreement (Please use the [current form](https://ib.wiso.fau.de/en/outgo/preparations/learning-agreements/) of the International Relations Office)
 
 -   The communication science courses you have already attended
 
--   Web link to the course description of the course proposed for recognition at the partner university (this should include: course title, content and scope, assessment, number of ECTS).
+-   Web link to the course description of the course proposed for recognition at the partner university (this should include course title, content and scope, assessment, number of ECTS).
 
 ### Notes for Bachelor's students
 
-A study abroad is particularly recommended for students who choose Communication Studies as their specialization. Although it is generally possible to take the basic courses abroad, they must correspond to the courses offered by the department and have an introductory character. Since the course offerings abroad are often limited, credit transfer for basic courses cannot be guaranteed.
+A study abroad is particularly recommended for students who choose Communication Studies as their specialisation. Although it is generally possible to take the basic courses abroad, they must correspond to the courses offered by the department and have an introductory character. Since the course offerings abroad are often limited, credit transfer for basic courses cannot be guaranteed.
 
 ```{=html}
 <!-- TODO Check infos for: Praxisaufenthalte Studierende Erasmus (Optional) --\> 
@@ -223,11 +223,10 @@ A study abroad is particularly recommended for students who choose Communication
 
 <!-- FIXED Verlinkung zu Buddy Programm: https://www.fau.de/education/international/aus-dem-ausland-an-die-fau/willkommensangebote-fuer-internationale-studierende/buddy-programm/  -->
 
-In time preparations for studying abroad is a part of the exchange process that should not be underestimated. FAU offers many useful options, e.g.,
+In time preparations for studying abroad are a part of the exchange process that should not be underestimated. FAU offers many useful options, e.g.,
 
--   Courses on specific topics (e.g. intercultural training at [ZIWIS]((https://www.ziwis.fau.eu/home/courses/key-qualifications/)) or at the Language Centre (can be found via campo))
+-   Courses on specific topics (e.g., intercultural training at [ZIWIS]((https://www.ziwis.fau.eu/home/courses/key-qualifications/)) or at the Language Centre (can be found via campo))
 -   [Language Courses](https://sz.fau.eu/courses/) offered by the Language Centre
--   acquisition of the certificate [*Intercultural Competence for Students*](https://www.ziwis.fau.de/zertifikat-interkulturelle-kompetenz-fuer-studierende-zertifikationsprogamm/)
--   [Buddy program](https://www.fau.de/education/international/aus-dem-ausland-an-die-fau/willkommensangebote-fuer-internationale-studierende/buddy-programm/)
+-   Acquisition of the certificate [*Intercultural Competence for Students*](https://www.ziwis.fau.de/zertifikat-interkulturelle-kompetenz-fuer-studierende-zertifikationsprogamm/)
+-   [Buddy programme](https://www.fau.de/education/international/aus-dem-ausland-an-die-fau/willkommensangebote-fuer-internationale-studierende/buddy-programm/)
 
-#
