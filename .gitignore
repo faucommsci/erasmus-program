@@ -50,3 +50,4 @@ rsconnect/
 # Manual
 _freeze
 .DS_Store
+local_*
