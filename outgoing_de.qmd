@@ -20,7 +20,7 @@ Die folgende interaktive Karte und Tabelle zeigen lediglich **die Partnerunivers
 
 if (!require("pacman")) install.packages("pacman")
 pacman::p_load(
-    readr, qs,
+    readr, qs2,
     here, tidyverse, 
     leaflet, raster, 
     osmdata, osmextract,
@@ -65,7 +65,7 @@ qs_save(df_en, file = here("data/universities-geo_locations_de.qs"))
 ```{r import-db}
 #| echo: false
 #| message: false
-df <- qread(here("data/universities-geo_locations_de.qs"))
+df <- qs_read(here("data/universities-geo_locations_de.qs"))
 ```
 
 ```{r create-icons}
@@ -81,7 +81,6 @@ leaflet(df) %>%
     addAwesomeMarkers(~long, ~lat, popup = ~info, icon = icons) 
 ```
 
-<!-- FIXME Exclude Poland as cooperation is apparently over -->
 
 ```{r create-table}
 #| echo: false
