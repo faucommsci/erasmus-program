@@ -5,8 +5,6 @@ format: html
 
 ## News and important dates
 
-<!-- FIXED Nennung des Termins für die Infoveranstaltung im Department (normalerweise vor Bewerbungstermin). Ggf. Link zu International Day der Fakultät. Optional Hinweis auf RIA Infoveranstaltungen: https://www.fau.de/education/international/wege-ins-ausland/erste-schritte-zum-auslandsaufenthalt/informationsveranstaltungen/   (wird in Kürze aktualisiert) -->
-
 For the academic year 2024/2025, Communication Science students have the opportunity to study at various partner universities of the [Chair of Communication Science](https://www.kowi.rw.fau.de/) in other European countries as part of the ERASMUS program. Please take note of the following important dates:
 
 -   05.11.2024 - [Presentation](slides/international_day.html) as part of the [International Day](https://www.wiso-international-day.fau.de/)
@@ -54,6 +52,6 @@ Please send all emails with inquiries regarding Learning Agreements or other ERA
 [wiso-erasmus-kowi\@fau.de](mailto:wiso-erasmus-kowi@fau.de)
 :::
 
-**Julius Klingelhöfer (he/him)**
+[Julius Klingelhöfer (he/him)]((mailto:wiso-erasmus-kowi@fau.de))
 
 Contact person for organizational and content-related ERASMUS matters & Learning Agreements.

@@ -16,19 +16,18 @@ On the page of the [International Relations Office](https://ib.wiso.fau.de/incom
 
 The Chair and the Junior Professorship of Communication Studies offers various courses in English in both the Bachelor's and Master's programmes:
 
-| Programm | Title                                                                                                                               | Type    | Term            |
-|----------------|-------------------------|----------------|----------------|
-| Bachelor | [Digital Technologies & Society](https://www.kommunikationswissenschaft.rw.fau.de/lehre/bachelor/digital-technologies-and-society/) | Lecture | Summer          |
-| Bachelor | [Hot Topics in International Communication Research](https://www.kommunikationswissenschaft.rw.fau.de/lehre/bachelor/hot-topics/)   | Seminar | Summer & Winter |
-| Master   | [Media Psychology and Effects](https://www.kommunikationswissenschaft.rw.fau.de/lehre/master/media-psychology-and-effects/)         | Seminar | Winter          |
+| Programm | Title | Type | Term |
+|-----------------|-----------------------|-----------------|-----------------|
+| Bachelor | [Digital Technologies & Society](https://www.kommunikationswissenschaft.rw.fau.de/lehre/bachelor/digital-technologies-and-society/) | Lecture | Summer |
+| Bachelor | [Hot Topics in International Communication Research](https://www.kommunikationswissenschaft.rw.fau.de/lehre/bachelor/hot-topics/) | Seminar | Summer & Winter |
+| Master | [Media Psychology and Effects](https://www.kommunikationswissenschaft.rw.fau.de/lehre/master/media-psychology-and-effects/) | Seminar | Winter |
 
 ## Contact
 
 ::: callout-important
-Please send all emails with inquiries regarding Learning Agreements or other ERASMUS-related matters to: 
-[wiso-erasmus-kowi\@fau.de](mailto:wiso-erasmus-kowi@fau.de)
+Please send all emails with inquiries regarding Learning Agreements or other ERASMUS-related matters to: [wiso-erasmus-kowi\@fau.de](mailto:wiso-erasmus-kowi@fau.de)
 :::
 
-**Julius Klingelhöfer (he/him)**
+[**Julius Klingelhöfer (he/him)**](mailto:wiso-erasmus-kowi@fau.de)
 
 Contact person for organizational and content-related ERASMUS matters & Learning Agreements.
