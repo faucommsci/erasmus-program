@@ -3,17 +3,133 @@ title: "Overview"
 format: html
 ---
 
+---
+title: "Overview"
+format: html
+---
+
 ## News and important dates
 
-For the academic year 2024/2025, Communication Science students have the opportunity to study at various partner universities of the [Chair of Communication Science](https://www.kowi.rw.fau.de/) in other European countries as part of the ERASMUS program. Please take note of the following important dates:
+<!-- FIXED Nennung des Termins für die Infoveranstaltung im Department (normalerweise vor Bewerbungstermin). Ggf. Link zu International Day der Fakultät. Optional Hinweis auf RIA Infoveranstaltungen: https://www.fau.de/education/international/wege-ins-ausland/erste-schritte-zum-auslandsaufenthalt/informationsveranstaltungen/   (wird in Kürze aktualisiert) -->
+
+For the academic year 2024/2025, Communication Science students have the opportunity to study at various partner universities of the [Chair of Communication Science](https://www.commsci.rw.fau.eu/) in other European countries as part of the ERASMUS program. Please take note of the following important dates:
 
 -   05.11.2024 - [Presentation](slides/international_day.html) as part of the [International Day](https://www.wiso-international-day.fau.de/)
 -   15.11.2024 - Activation of the online application
 -   05.12.2024 - Application deadline
 
+::: callout-note
+## Information on available places and partner universities of the FAU
+
+The interactive map and table below only show the **partner universities of the Chair for Communication Science**. You can find an overview of all the places abroad offered by FAU at:
+
+🔗 [Partner universities for ERASMUS+](https://www.fau.de/education/international/wege-ins-ausland/studieren-im-ausland/erasmus-studium/erasmus-partnerhochschulen/) 
+
+🌍 [Interactive world map](https://www.fau.eu/education/international/going-abroad/studying-abroad/)
+:::
+
+## Partner universities
+
+```{r session-setup}
+#| echo: false
+#| message: false
+
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load(
+    readr, qs,
+    here, tidyverse, 
+    leaflet, raster, 
+    osmdata, osmextract,
+    glue,
+    gt
+)
+```
+
+```{r optional-create-new-qs-data}
+#| echo: false
+#| eval: false
+source(here("R/data-creation.r"))
+```
+
+```{r import-db}
+#| echo: false
+#| message: false
+df_en <- qread(here("data/universities-geo_locations_en.qs"))
+```
+
+```{r create-icons}
+#| echo: false
+#| column: page
+#| fig-align: center
+icons <- awesomeIcons(
+    markerColor = "darkblue"
+)
+
+leaflet(df_en) %>%
+    addTiles() %>% 
+    addAwesomeMarkers(~long, ~lat, popup = ~info, icon = icons) 
+```
+
+```{r create-icons-troubleshooting}
+#| echo: false
+#| eval: false
+invalid_rows <- which(!validUTF8(df_en$info))
+
+# Zeige problematische Zeilen an
+df_en[invalid_rows, ]
+df_en$info <- iconv(df_en$info, from = "unknown", to = "UTF-8", sub = "byte")
+unique(Encoding(df_en$info))
+# Finde Zeilen mit "unknown" Kodierung
+unknown_encoding_rows <- which(Encoding(df_en$info) == "unknown")
+
+# Zeige die betroffenen Zeilen an
+df_en[unknown_encoding_rows, ]
+df_en$info <- iconv(df_en$info, from = "windows-1252", to = "UTF-8", sub = "byte")
+```
+
+```{r create-table}
+#| echo: false
+#| column: page
+
+library(gt)
+
+df_en %>%
+    mutate(
+        duration = paste(duration, "months", sep = " "),
+        uni_link = glue("[{uni}]({link})"),
+        uni_link = map(uni_link, gt::md)
+    ) %>% 
+    dplyr::select(country, uni_link, places:languages, wise:sose) %>% 
+    gt::gt() %>% 
+    cols_label(
+        country = "country",
+        uni_link = "University", 
+        places = "places",
+        duration = "duration of exchange",
+        languages = "Courses available in",
+        wise = "winter term",
+        sose = "summer term"
+    ) %>% 
+    gtExtras::gt_highlight_rows(
+        rows = c(7, 10, 12),
+        fill = "#18B4F1", 
+        alpha = 0.075,
+        font_weight = "normal",
+        bold_target_only = FALSE
+    ) %>%
+    tab_footnote(
+    footnote = "only BA students",
+    placement = "right", 
+    locations = cells_body(
+      columns = 3, row = c(7, 10, 12))
+    ) %>% 
+    gtExtras::gt_theme_538()
+
+```
+
 ## Information for Outgoing students
 
-click [here](outgoing.html) for:
+click [here](outgoing_en.html) for:
 
 -   a chart of all partner universities for ERASMUS+ of the chair, providing information on available places, duration of stay and languages of teaching
 -   general and chair-specific participation requirements, before and during the stay abroad
@@ -30,7 +146,7 @@ click [here](outgoing.html) for:
 
 ## Information for Incoming students
 
-click [here](incoming.html) for:
+click [here](incoming_en.html) for:
 
 -   helpful resources for incoming international students at a university.
 -   English-language courses offered by the Chair and Junior Professorship of Communication Studies.
@@ -48,10 +164,9 @@ click [here](incoming.html) for:
 ## Contact
 
 ::: callout-important
-Please send all emails with inquiries regarding Learning Agreements or other ERASMUS-related matters to: 
-[wiso-erasmus-kowi\@fau.de](mailto:wiso-erasmus-kowi@fau.de)
+Please send all emails with inquiries regarding Learning Agreements or other ERASMUS-related matters to: [wiso-erasmus-kowi\@fau.de](mailto:wiso-erasmus-kowi@fau.de)
 :::
 
-[Julius Klingelhöfer (he/him)]((mailto:wiso-erasmus-kowi@fau.de))
+**Julius Klingelhöfer (he/him)**
 
 Contact person for organizational and content-related ERASMUS matters & Learning Agreements.

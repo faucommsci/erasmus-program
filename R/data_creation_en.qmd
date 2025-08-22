@@ -30,4 +30,3 @@ df_en <- read_delim(
 ## Export qs-data
 qsave(df_en, file = here("data/universities-geo_locations_en.qs"))
 ```
-
