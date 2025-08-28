@@ -24,9 +24,9 @@ website:
     right:
       - href: index.qmd
         text: Home
-      - href: outgoing_en.qmd
+      - href: outgoing.qmd
         text: Outgoing
-      - href: incoming_en.qmd
+      - href: incoming.qmd
         text: Incoming      
       # - href: about.qmd
       #  text: Contact

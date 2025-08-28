@@ -130,7 +130,7 @@ df_en %>%
 
 ## Information for Outgoing students
 
-click [here](outgoing_en.html) for:
+click [here](outgoing.html) for:
 
 -   a chart of all partner universities for ERASMUS+ of the chair, providing information on available places, duration of stay and languages of teaching
 -   general and chair-specific participation requirements, before and during the stay abroad
