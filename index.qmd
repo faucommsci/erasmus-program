@@ -101,7 +101,7 @@ df_en %>%
         uni_link = map(uni_link, gt::md)
     ) %>% 
     dplyr::select(country, uni_link, places:languages, wise:sose) %>% 
-    gt::gt() %>% 
+    gt::gt(id = "table_1") %>% 
     cols_label(
         country = "country",
         uni_link = "University", 
