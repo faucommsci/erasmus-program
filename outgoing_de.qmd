@@ -1,5 +1,7 @@
 ---
 title: Informationen für Outgoing Studierende
+execute:
+  eval: false
 ---
 
 ::: callout-note

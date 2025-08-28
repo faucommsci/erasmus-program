@@ -41,7 +41,8 @@ pacman::p_load(
     leaflet, raster, 
     osmdata, osmextract,
     glue,
-    gt
+    gt,
+    gtExtras
 )
 ```
 
