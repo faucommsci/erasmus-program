@@ -160,7 +160,7 @@ The following documents must be uploaded via the [online portal](https://ib.wiso
 -   Grades documents:
     -   for BA applicants, grade transcript from [MeinCampus](https://www.campus.uni-erlangen.de/qisserver/pages/cs/sys/portal/hisinoneStartPage.faces),
     -   for MA applicants, a German BA transcript or copy of the international BA transcript (official conversion is transferred internally according to the so-called Eignungsfeststellungsnote of the FAU admission office).
--   Language certificates (see \[[Language Requirements]{.underline}\])(https://ib.wiso.fau.de/en/outgo/preparations/language-skills-tests/)
+-   Language certificates (see [Language Requirements](https://ib.wiso.fau.de/en/outgo/preparations/language-skills-tests/))
 -   Proof of internships, social or volunteer work (maximum 2 proofs)
 :::
 
@@ -228,7 +228,7 @@ A study abroad is particularly recommended for students who choose Communication
 
 In time preparations for studying abroad are a part of the exchange process that should not be underestimated. FAU offers many useful options, e.g.,
 
--   Courses on specific topics (e.g., intercultural training at [ZIWIS]((https://www.ziwis.fau.eu/home/courses/key-qualifications/)) or at the Language Centre (can be found via campo))
+-   Courses on specific topics (e.g., intercultural training at [ZIWIS](https://www.ziwis.fau.eu/home/courses/key-qualifications/) or at the Language Centre (can be found via campo))
 -   [Language Courses](https://sz.fau.eu/courses/) offered by the Language Centre
 -   Acquisition of the certificate [*Intercultural Competence for Students*](https://www.ziwis.fau.de/zertifikat-interkulturelle-kompetenz-fuer-studierende-zertifikationsprogamm/)
 -   [Buddy programme](https://www.fau.eu/education/international/from-abroad/welcome-programme-for-international-students/buddy-programme/)

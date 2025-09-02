@@ -146,8 +146,8 @@ click [here](outgoing.html) for:
 🔗 [Overview of the ERASMUS programme](https://www.fau.eu/fau/welcome-to-fau/internationalisation/erasmus/)
 
 ## Information for Incoming students
-
-click [here](incoming_en.html) for:
+js
+click [here](incoming.html) for:
 
 -   helpful resources for incoming international students at a university.
 -   English-language courses offered by the Chair and Junior Professorship of Communication Studies.
