@@ -51,3 +51,4 @@ rsconnect/
 _freeze
 .DS_Store
 local_*
+**/*.quarto_ipynb

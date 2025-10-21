@@ -12,15 +12,17 @@ On the page of the [International Relations Office](https://ib.wiso.fau.de/incom
 
 -   Special events/programmes for orientation at FAU, like the [central welcome weeks](https://www.fau.eu/education/international/from-abroad/welcome-programme-for-international-students/orientation-courses-for-international-students/) or the [Buddy programme](https://www.fau.eu/education/international/from-abroad/welcome-programme-for-international-students/buddy-programme/)
 
-## Lectures
+## Lectures and Classes in English
 
-The Chair and the Junior Professorship of Communication Studies offers various courses in English in both the Bachelor's and Master's programmes:
+The Assistant Professorship for Communication Science offers various courses in English in both the Bachelor's and Master's programmes:
 
 | Programm | Title | Type | Term |
 |-----------------|-----------------------|-----------------|-----------------|
 | Bachelor | [Digital Technologies & Society](https://www.kommunikationswissenschaft.rw.fau.de/lehre/bachelor/digital-technologies-and-society/) | Lecture | Summer |
-| Bachelor | [Hot Topics in International Communication Research](https://www.kommunikationswissenschaft.rw.fau.de/lehre/bachelor/hot-topics/) | Seminar | Summer & Winter |
+| Bachelor | [Hot Topics in International Communication Research](https://www.kommunikationswissenschaft.rw.fau.de/lehre/bachelor/hot-topics/) | Seminar | Winter |
 | Master | [Media Psychology and Effects](https://www.kommunikationswissenschaft.rw.fau.de/lehre/master/media-psychology-and-effects/) | Seminar | Winter |
+
+Plese search [StudOn](https://www.studon.fau.de) for the current course offers and check the other available courses in German.
 
 ## Contact
 
@@ -31,3 +33,4 @@ Please send all emails with inquiries regarding Learning Agreements or other ERA
 [**Julius Klingelhöfer (he/him)**](mailto:wiso-erasmus-kowi@fau.de)
 
 Contact person for organizational and content-related ERASMUS matters & Learning Agreements.
+

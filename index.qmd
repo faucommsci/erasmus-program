@@ -3,10 +3,6 @@ title: "Overview"
 format: html
 ---
 
----
-title: "Overview"
-format: html
----
 
 ## News and important dates
 
@@ -14,9 +10,9 @@ format: html
 
 For the academic year 2024/2025, Communication Science students have the opportunity to study at various partner universities of the [Chair of Communication Science](https://www.commsci.rw.fau.eu/) in other European countries as part of the ERASMUS program. Please take note of the following important dates:
 
--   05.11.2024 - [Presentation](slides/international_day.html) as part of the [International Day](https://www.wiso-international-day.fau.de/)
--   15.11.2024 - Activation of the online application
--   05.12.2024 - Application deadline
+-   04.11.2025 - [Presentation](slides/international_day.html) as part of the [International Day](https://www.wiso-international-day.fau.de/)
+-   15.11.2025 - Activation of the online application
+-   05.12.2025 - Application deadline
 
 ::: callout-note
 ## Information on available places and partner universities of the FAU
@@ -146,7 +142,7 @@ click [here](outgoing.html) for:
 🔗 [Overview of the ERASMUS programme](https://www.fau.eu/fau/welcome-to-fau/internationalisation/erasmus/)
 
 ## Information for Incoming students
-js
+
 click [here](incoming.html) for:
 
 -   helpful resources for incoming international students at a university.
