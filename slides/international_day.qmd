@@ -1,5 +1,5 @@
 ---
-title: "International Day 2024"
+title: "International Day 2025"
 subtitle: "ERASMUS-Auslandsstudium über den Lehrstuhl für Kommunikationswissenschaft"
 title-slide-attributes:
   data-background-image: img/slide_bg-title.png
@@ -7,7 +7,7 @@ title-slide-attributes:
   data-background-color: "#04316a"
 
 author: 
-  - name: Christoph Adrian 
+  - name: Julius Klingelhoefer 
     url: https://faucommsci.github.io/erasmus-program/about.html
 
 format:
@@ -66,6 +66,8 @@ editor_options:
 :::
 
 ## 15 Partneruniversitäten in 10 Ländern
+
+Alle Details auch unter: [https://ib.wiso.fau.de/outgo/wege-ins-ausland/partneruniversitaeten/erasmus/]https://ib.wiso.fau.de/outgo/wege-ins-ausland/partneruniversitaeten/erasmus/
 
 #### Angebot des Lehrstuhls für Kommunikationswissenschaft
 
@@ -202,29 +204,6 @@ df %>%
   gtExtras::gt_theme_538()
 ```
 
-## 🇫🇮 Finnland
-
-```{r define-parameters-finland}
-#| echo: false
-
-# define parameters
-current_country_en = "Finland"
-current_country_de = "Finnland"
-```
-
-```{r map-finland}
-#| echo: false
-#| fig-height: 4
-#| fig-align: center
-#| column: page
-
-df %>% createCountryMap(map_units, current_country_en, current_country_de)
-```
-
-```{r table-finland}
-#| echo: false
-df %>% createCountryTable(current_country_de)
-```
 
 ## 🇫🇷 Frankreich
 
@@ -326,6 +305,32 @@ df %>% createCountryMap(map_units, current_country_en, current_country_de)
 
 df %>% createCountryTable(current_country_de)
 ```
+
+
+## 🇵🇱 Polen
+
+```{r define-parameters-poland}
+#| echo: false
+# define parameters
+current_country_en = "Poland"
+current_country_de = "Polen"
+```
+
+```{r map-poland}
+#| echo: false
+#| fig-height: 4
+#| fig-align: center
+
+df %>% createCountryMap(map_units, current_country_en, current_country_de)
+```
+
+```{r table-poland}
+#| echo: false
+ 
+df %>% createCountryTable(current_country_de)
+```
+
+
 
 ## 🇷🇴 Rumänien
 
@@ -489,7 +494,7 @@ df %>% createCountryTable(current_country_de)
 #### Modalitäten und Ablauf
 
 ::: {style="font-size: smaller;"}
-1.  Bewerbung für das akademische Jahr 2025/2026 (Winter- und Sommersemester) über das [**Online-Bewerbungsformular (ab 15.11. verfügbar)**](https://ib.wiso.fau.de/outgo/allgemeines/bewerbung/bewerbungsformular-outgoing/) des [Büros für Internationale Beziehungen](https://ib.wiso.fau.de/outgo/bewerbung/). Der Bewerbungsschluss ist **Dienstag, 5. Dezember 2024, 12.00 Uhr**
+1.  Bewerbung für das akademische Jahr 2026/2027 (Winter- und Sommersemester) über das [**Online-Bewerbungsformular (ab 15.11. verfügbar)**](https://ib.wiso.fau.de/outgo/allgemeines/bewerbung/bewerbungsformular-outgoing/) des [Büros für Internationale Beziehungen](https://ib.wiso.fau.de/outgo/bewerbung/). Der Bewerbungsschluss ist der **5. Dezember 2025, 12.00 Uhr**
 2.  Nach Ende der Bewerbungsfrist werden alle Bewerbungen geprüft, die **Auswahl erfolgt im Januar/Februar.** Sie werden per E-Mail über die Auswahlentscheidung informiert.
 3.  Nach erfolgreicher Auswahl und Ihrer Zusage des Platzes werden Sie vom International Office an der jeweiligen Partnerhochschule offiziell **nominiert**.
 4.  Nach der Nominierung erfolgt die Bewerbung an Ihrer Zielhochschule. **Bitte beachten Sie, dass die endgültige Entscheidung über die Zulassung bei den Partnerhochschulen liegt.**
@@ -510,13 +515,13 @@ Falls Sie über einen anderen Lehrstuhl ins Ausland gehen, können Sie sich gena
 
 <br>
 
-![](https://github.com/faucommsci/dbd_2023/blob/main/img/team/ca-circle.png?raw=true){style="float:right;padding: 0 0 0 0px;" fig-alt="Headshot of Christoph Adrian" width="150"}
+![](img/julius.jpg){style="float:right;padding: 0 0 0 0px;" fig-alt="Headshot of Julius Klingelhoefer" width="150"}
 
-**Christoph Adrian (he/him)**
+**Julius Klingelhoefer (he/him)**
 
 Ansprechpartner des Lehrstuhls für Kommuniationswissenschaft bei organisatorische und inhaltliche Angelegenheiten & Learning Agreements
 
 {{< bi house >}} <https://kowi.rw.fau.de/>
 
-{{< bi envelope >}} [christoph.adrian\@fau.de](mailto:christoph.adrian@fau.de)
+{{< bi envelope >}} [wiso-erasmus-kowi\@fau.de](mailto:wiso-erasmus-kowi@fau.de)
 :::

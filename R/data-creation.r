@@ -59,3 +59,4 @@ df_en <- readxl::read_excel(
 qsave(df_en, file = here("data/universities-geo_locations_en.qs"))
 
 
+
