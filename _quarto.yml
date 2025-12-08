@@ -33,12 +33,9 @@ website:
       # - icon: house
       #   href: https://www.kowi.rw.fau.de/
       #   aria-label: Homepage Lehrstuhl
-      # - icon: house-fill
-      #   href: https://www.kommunikationswissenschaft.rw.fau.de/
-      #   aria-label: Homepage Juniorprofessur
 
   page-footer: 
-    left: "[Lehrstuhl](https://www.kowi.rw.fau.de/) & [Juniorprofessur](https://www.kommunikationswissenschaft.rw.fau.de/) für Kommunikationswissenschaft"
+    left: "[Lehrstuhl für Kommunikationswissenschaft](https://www.kowi.rw.fau.de/)"
     right: "This page is built with ☕ & [Quarto](https://quarto.org/)."
 
 format:

@@ -136,7 +136,7 @@ df %>%
 ::: callout-warning
 #### Wichtig! Bitte unbedingt beachten!
 
--   Erfolgreicher Abschluss **mindestens eines Moduls in Kommunikationswissenschaft** ([Lehrstuhl](https://www.kowi.rw.fau.de/lehre/) oder [Juniorprofessur](https://www.kommunikationswissenschaft.rw.fau.de/lehre/)). Gilt **sowohl für Bachelor- als auch Masterstudierende**. **Für *Bachelor*studierenden empfiehlt sich insbesondere der Besuch von einer unserer Vorlesungen**:
+-   Erfolgreicher Abschluss **mindestens eines Moduls in Kommunikationswissenschaft** ([Lehrstuhlwebsite](https://www.kowi.rw.fau.de/lehre/)). Gilt **sowohl für Bachelor- als auch Masterstudierende**. **Für *Bachelor*studierenden empfiehlt sich insbesondere der Besuch von einer unserer Vorlesungen**:
     -   [📖 Medien und Kommunikation](https://www.kowi.rw.fau.de/lehre/bachelor/medien-und-kommunikation/)
     -   [📖 Digital Technologies & Society](https://www.kowi.rw.fau.de/lehre/bachelor/digital-technologies-and-society/)
 -   Zudem sollten die Bewerber:innen **ausreichende Kenntnisse der jeweiligen Landessprache bzw. gute Englischkenntnisse** mitbringen.
